@@ -2,15 +2,14 @@
 import React from "react";
 
 /* Components */
+import { BackgroundImage } from "./style";
 
 /* Functions */
 
 function HeaderSection() {
   return (
     <>
-      <div>
-        <p>hello</p>
-      </div>
+      <BackgroundImage />
     </>
   );
 }
