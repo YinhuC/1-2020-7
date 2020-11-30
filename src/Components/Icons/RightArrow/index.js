@@ -11,6 +11,9 @@ export const RightArrow = () => {
     <Main
       onMouseEnter={() => setType("menu")}
       onMouseLeave={() => setType("default")}
+      smooth={true}
+      duration={1000}
+      to="slide"
     >
       <IconContext.Provider value={{ color: "white", size: "40px" }}>
         <FaArrowRight />

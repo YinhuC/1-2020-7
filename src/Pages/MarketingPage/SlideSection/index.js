@@ -18,7 +18,7 @@ export default function SlideSection() {
       .map((_e, i) => <SampleCard key={`sampleCard-${i}`} />)
   );
   return (
-    <div>
+    <div className="slide">
       <GlobalStyle />
       <Main>
         <BumperSection>
