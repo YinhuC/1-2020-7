@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IconContext } from "react-icons";
-import CursorContext from "../Cursor/Context/CursorContext";
+import CursorContext from "../../Cursor/Context/CursorContext";
 
 export const MenuIcon = () => {
   const { setType } = useContext(CursorContext);

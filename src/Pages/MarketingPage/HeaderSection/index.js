@@ -5,7 +5,7 @@ import React from "react";
 import { BackgroundImage, HeaderContainer } from "./style";
 import { Cursor } from "../../../Components/Cursor/index";
 import CursorManager from "../../../Components/Cursor/Context/manager";
-import { MenuIcon } from "../../../Components/MenuIcon";
+import { MenuIcon } from "../../../Components/Icons/MenuIcon";
 
 /* Functions */
 
