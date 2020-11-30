@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const Main = styled.main``;
+export const Main = styled.div``;
 
 export const HorizontalSection = styled.section`
   position: relative;
@@ -42,16 +42,4 @@ export const SampleCard = styled.div`
   width: 1000px;
   background-color: #111f30;
   margin-right: 250px;
-`;
-export const OuterContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-
-  height: 200px;
-  width: 100%;
-
-  background-color: black;
-  font-weight: bolder;
 `;

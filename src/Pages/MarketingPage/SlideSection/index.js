@@ -22,7 +22,7 @@ export default function SlideSection() {
       <GlobalStyle />
       <Main>
         <BumperSection>
-          <h2>Scroll down to reach the horizontal scroll section</h2>
+          <h2>Explore New Zealand In Your Own Way</h2>
         </BumperSection>
         <HorizontalSection>
           <HorizontalScroll>

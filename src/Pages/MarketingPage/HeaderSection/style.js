@@ -5,6 +5,7 @@ import image2 from "../../../Images/48-Milford-Sound-Will-Patino-min.jpg";
 import image3 from "../../../Images/0013-Springfield-Canterbury-Matt-Crawford-min.jpg";
 import image4 from "../../../Images/8399-Wanaka-Miles-Holden-min.jpg";
 import image5 from "../../../Images/45-Aoraki-Lake-Pukaki-Will-Patino-min.jpg";
+import { Container } from "reactstrap";
 
 export const BackgroundVideo = styled.video`
   position: absolute;
@@ -34,9 +35,6 @@ export const VideoContainer = styled.div`
 `;
 
 export const BackgroundContainer = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   border: 0.1px solid black;
 
   /* Full height */
@@ -44,18 +42,18 @@ export const BackgroundContainer = styled.div`
   width: 100%;
 `;
 
-export const HeaderContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+export const HeaderContainer = styled.h1`
   user-select: none;
-
   width: 100%;
+  color: white;
+  height: 150px;
+`;
 
-  color: #fff;
-  font-weight: bolder;
-  font-size: 30px;
-  margin: 6% 10% 6% 10%;
+export const MainContainer = styled(Container)`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 `;
 
 const animate = keyframes`

@@ -11,7 +11,7 @@ export const MenuIcon = () => {
       onMouseEnter={() => setType("menu")}
       onMouseLeave={() => setType("default")}
     >
-      <IconContext.Provider value={{ color: "white", size: "30px" }}>
+      <IconContext.Provider value={{ color: "white", size: "40px" }}>
         <FiMenu />
       </IconContext.Provider>
     </div>
