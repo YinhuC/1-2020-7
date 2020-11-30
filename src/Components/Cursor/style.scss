@@ -1,11 +1,83 @@
-.cursor {
-  z-index: 1000;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  border: 2px solid white;
+.main-cursor,
+.secondary-cursor {
+  z-index: 10000;
+
   pointer-events: none;
-  overflow: hidden;
+  // overflow: hidden;
   transform: translate3d(0, 0, 0);
   position: fixed;
+}
+
+.main-cursor {
+  transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1);
+  animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  mix-blend-mode: difference;
+
+  .main-cursor-background {
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+  }
+}
+
+.secondary-cursor {
+  width: 75px;
+  height: 75px;
+
+  .cursor-background {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+}
+
+.menu {
+  .cursor-background {
+    animation: fadeOut 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  }
+
+  .main-cursor-background {
+    animation: scaleUp 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(17);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(17);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }

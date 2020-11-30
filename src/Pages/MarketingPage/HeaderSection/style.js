@@ -40,7 +40,7 @@ export const BackgroundImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 
-  /* Change background Image*/
+  /* Change background Image
   transition: 5s;
 
   animation-name: ${animate};
@@ -49,13 +49,16 @@ export const BackgroundImage = styled.div`
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   animation-play-state: running;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; */
 `;
 
 export const HeaderContainer = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+
+  width: 100%;
 
   color: #fff;
   font-weight: bolder;
