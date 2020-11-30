@@ -29,7 +29,7 @@ export const BumperSection = styled.section`
 export const CardsContainer = styled.div`
   position: relative;
   height: 100%;
-  padding: 0 0 0 150px;
+  padding: 0 2% 0 8%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -38,11 +38,10 @@ export const CardsContainer = styled.div`
 
 export const SampleCard = styled.div`
   position: relative;
-  height: 300px;
-  width: 500px;
+  height: 50%;
+  width: 1000px;
   background-color: #111f30;
-  margin-right: 75px;
-  flex-shrink: 0;
+  margin-right: 250px;
 `;
 export const OuterContainer = styled.div`
   display: flex;
