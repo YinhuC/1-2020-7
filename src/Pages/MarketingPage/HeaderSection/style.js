@@ -37,6 +37,7 @@ export const BackgroundContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  border: 0.1px solid black;
 
   /* Full height */
   height: 100vh;
