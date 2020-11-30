@@ -14,27 +14,27 @@ import { MenuIcon } from "../../../Components/Icons/MenuIcon";
 import video from "../../../Videos/dark.mp4";
 
 /* Functions */
+/* need to actually wrap the icon AND cursor for it to change, also need 
+the cursor to be a direct child of cursor manager */
 
 function HeaderSection() {
   return (
-    <div>
+    <CursorManager>
+      <Cursor />
+
       <VideoContainer>
         <BackgroundVideo autoPlay muted loop id="myVideo">
           <source src={video} type="video/mp4" />
         </BackgroundVideo>
-        <CursorManager>
-          {/* need to actually wrap the icon and cursor for it to change */}
-          <Cursor />
-          <BackgroundContainer>
-            <HeaderContainer>
-              Explore New Zealand
-              <MenuIcon />
-            </HeaderContainer>
-          </BackgroundContainer>
-        </CursorManager>
+        <BackgroundContainer>
+          <HeaderContainer>
+            Explore New Zealand
+            <MenuIcon />
+          </HeaderContainer>
+        </BackgroundContainer>
       </VideoContainer>
       <BackgroundContainer />
-    </div>
+    </CursorManager>
   );
 }
 
