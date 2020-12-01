@@ -47,7 +47,7 @@ function Footer() {
             <FooterText className="mb-3">
               The main video is created using Shotcut. Shotcut is a free, open
               source, cross-platform video editor. Images and videos used in
-              this website is from Tourism New Zealand. Click below to learn
+              this website are from Tourism New Zealand. Click below to learn
               more and support tourism in New Zealand.
             </FooterText>
             <Button
