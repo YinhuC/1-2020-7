@@ -6,6 +6,7 @@ import MarketingPage from "./Pages/MarketingPage";
 import CursorManager from "./Components/Cursor/Context/manager.tsx";
 import { Cursor } from "./Components/Cursor";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
 /* Functions */
 
@@ -15,6 +16,7 @@ function App() {
       <Cursor />
       <Header />
       <MarketingPage />
+      <Footer />
     </CursorManager>
   );
 }
