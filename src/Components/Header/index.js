@@ -36,7 +36,6 @@ class Header extends React.Component {
       <Fade in={this.state.scrollUp}>
         <Center>
           <Container>
-            <Row></Row>
             <Row className="mt-5">
               <Col className="d-flex justify-content-end mt-1 mr-3">
                 <TourismText style={{ color: this.state.color }}>
