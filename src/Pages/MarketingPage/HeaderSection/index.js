@@ -11,7 +11,7 @@ import {
   MainContainer,
 } from "./style";
 import video from "../../../Videos/dark.mp4";
-import { RightArrow } from "../../../Components/Icons/RightArrow";
+import { DownArrow } from "../../../Components/Icons/DownArrow";
 
 /* Functions */
 /* need to actually wrap the icon AND cursor for it to change, also need 
@@ -35,7 +35,7 @@ function HeaderSection() {
                 </HeaderContainer>
               </Col>
               <Col className="col-5 d-flex justify-content-end mt-2 ">
-                <RightArrow />
+                <DownArrow />
               </Col>
             </Row>
           </MainContainer>

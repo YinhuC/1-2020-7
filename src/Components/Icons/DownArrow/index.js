@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import CursorContext from "../../Cursor/Context/CursorContext";
 import { Main } from "./style";
 
-export const RightArrow = () => {
+export const DownArrow = () => {
   const { setType } = useContext(CursorContext);
 
   return (
@@ -16,7 +16,7 @@ export const RightArrow = () => {
       to="slide"
     >
       <IconContext.Provider value={{ color: "white", size: "40px" }}>
-        <FaArrowRight />
+        <FaArrowDown />
       </IconContext.Provider>
     </Main>
   );
