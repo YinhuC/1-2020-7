@@ -10,9 +10,6 @@ import {
   VideoContainer,
   MainContainer,
 } from "./style";
-import { Cursor } from "../../../Components/Cursor/index";
-import CursorManager from "../../../Components/Cursor/Context/manager";
-import { MenuIcon } from "../../../Components/Icons/Menu";
 import video from "../../../Videos/dark.mp4";
 import { RightArrow } from "../../../Components/Icons/RightArrow";
 
@@ -22,19 +19,14 @@ the cursor to be a direct child of cursor manager */
 
 function HeaderSection() {
   return (
-    <CursorManager>
-      <Cursor />
+    <>
       <VideoContainer>
         <BackgroundVideo autoPlay muted loop id="myVideo">
           <source src={video} type="video/mp4" />
         </BackgroundVideo>
         <BackgroundContainer>
           <MainContainer>
-            <Row className="mt-5">
-              <Col className="d-flex justify-content-end mt-1 mr-3">
-                <MenuIcon />
-              </Col>
-            </Row>
+            <Row></Row>
             <Row>
               <Col className="col-7">
                 <HeaderContainer>
@@ -50,7 +42,7 @@ function HeaderSection() {
         </BackgroundContainer>
       </VideoContainer>
       <BackgroundContainer />
-    </CursorManager>
+    </>
   );
 }
 
