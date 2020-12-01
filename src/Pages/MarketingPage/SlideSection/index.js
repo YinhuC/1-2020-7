@@ -23,10 +23,31 @@ import image5 from "../../../Images/Optimized-8399-Wanaka-Miles-Holden-min.jpg";
 /*https://sudo.isl.co/translate-vertical-horizontal/*/
 
 export default function SlideSection() {
+  const info = [
+    "Ahuriri Valley",
+    "Springfield",
+    "Aoraki Mount Cook National Park",
+    "Milford Sound",
+    "Castlepoint",
+    "Roys Peak",
+  ];
+  const location = [
+    "North Otago",
+    "Canterbury",
+    "Lake Pukaki",
+    "Fiordland",
+    "Wairarapa",
+    "Wanaka",
+  ];
   const arrayImages = [image, image1, image2, image3, image4, image5];
   const SampleCards = React.memo(() =>
     arrayImages.map((currentImage, i) => (
-      <CustomCard image={currentImage} key={`sampleCard-${i}`} />
+      <CustomCard
+        image={currentImage}
+        header={location[i]}
+        subheader={info[i]}
+        key={`sampleCard-${i}`}
+      />
     ))
   );
   return (
@@ -44,7 +65,7 @@ export default function SlideSection() {
           </HorizontalScroll>
         </HorizontalSection>
         <BumperSection>
-          <h2>You have left the horizontal horizontal scroll section</h2>
+          <h2>Start the Adventure</h2>
         </BumperSection>
       </Main>
     </div>

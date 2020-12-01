@@ -23,3 +23,26 @@ export const ImageContainer = styled.div`
   box-shadow: 10px 10px 20px lightgrey;
   margin: 0 2% 0 0;
 `;
+
+export const Overlay = styled.div`
+  width: 100%;
+  position: absolute;
+  color: black;
+`;
+
+export const TopContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 30px 0 0;
+  user-select: none;
+`;
+
+export const Header = styled.h2`
+  display: flex;
+  justify-content: flex-end;
+`;
+export const Subheader = styled.h4`
+  display: flex;
+  justify-content: flex-end;
+`;

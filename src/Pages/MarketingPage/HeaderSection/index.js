@@ -30,19 +30,19 @@ function HeaderSection() {
         </BackgroundVideo>
         <BackgroundContainer>
           <MainContainer>
-            <Row>
-              <Col className="d-flex justify-content-center mt-5">
+            <Row className="mt-5">
+              <Col className="d-flex justify-content-end mt-1 mr-3">
                 <MenuIcon />
               </Col>
             </Row>
             <Row>
-              <Col className="col-8">
+              <Col className="col-7">
                 <HeaderContainer>
-                  Take Control Of Your Life
+                  Discover New Zealand
                   <div style={{ fontSize: "30px" }}>Begin Your Journey</div>
                 </HeaderContainer>
               </Col>
-              <Col className="col-4 d-flex justify-content-center mt-4">
+              <Col className="col-5 d-flex justify-content-end mt-2 ">
                 <RightArrow />
               </Col>
             </Row>
