@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CovidContainer = styled.div`
-  padding: 300px 0 0 0;
+  padding: 200px 0 0 0;
   display: flex;
   align-items: center;
   justify-content: center;

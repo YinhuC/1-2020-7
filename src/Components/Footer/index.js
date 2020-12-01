@@ -33,18 +33,22 @@ function Footer() {
             >
               COVID-19 NZ Situtation
             </FooterLinks>
+            <FooterLinks href="https://shotcut.org/" target="_blank">
+              Shotcut Video Editor
+            </FooterLinks>
           </Col>
 
-          <Col className="col-12 col-md-9 pl-5 d-flex  flex-column">
+          <Col className="col-12 col-md-9 pl-5 d-flex flex-column">
             <FooterText>
               This web application was designed as a personal project to promote
               tourism, and to start encoruaging New Zealanders to travel within
               New Zealand.
             </FooterText>
             <FooterText className="mb-3">
-              Images and videos used in this website is from Tourism New
-              Zealand. Click below to learn more and support tourism in New
-              Zealand. Thanks
+              The main video is created using Shotcut. Shotcut is a free, open
+              source, cross-platform video editor. Images and videos used in
+              this website is from Tourism New Zealand. Click below to learn
+              more and support tourism in New Zealand.
             </FooterText>
             <Button
               href="https://www.tourismnewzealand.com/"

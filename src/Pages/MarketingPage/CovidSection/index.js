@@ -15,10 +15,11 @@ function CovidSection() {
     <CovidContainer>
       <Container>
         <Row className="d-flex flex-column">
-          <Col>
+          <Col className="text-center">
+            <h2>Before You Go</h2>
             <Alert
               theme="warning"
-              style={{ color: "black", fontWeight: "bold" }}
+              style={{ color: "black", fontWeight: "bold", marginTop: "50px" }}
             >
               Alert - Warning
             </Alert>
@@ -29,7 +30,8 @@ function CovidSection() {
               to explore again. There are businesses that will benefit from more
               tourism, plus you deserve to relax and travel. However, safety
               should always be put first. If you are sick, get tested and always
-              practise social distancing.
+              practise social distancing. To learn more about COVID-19 and how
+              to stop the spread:
             </DisclaimerText>
           </Col>
           <Col className="d-flex justify-content-center">
