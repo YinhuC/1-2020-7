@@ -16,7 +16,10 @@ function CovidSection() {
       <Container>
         <Row className="d-flex flex-column">
           <Col>
-            <Alert theme="warning" style={{ color: "black" }}>
+            <Alert
+              theme="warning"
+              style={{ color: "black", fontWeight: "bold" }}
+            >
               Alert - Warning
             </Alert>
           </Col>
