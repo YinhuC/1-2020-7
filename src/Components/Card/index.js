@@ -2,15 +2,15 @@
 import React from "react";
 
 /* Components */
-import { CardImage } from "./style";
+import { CardImage, ImageContainer } from "./style";
 
 /* Functions */
 
 function CustomCard({ image }) {
   return (
-    <>
+    <ImageContainer>
       <CardImage style={{ backgroundImage: `url(${image})` }} />
-    </>
+    </ImageContainer>
   );
 }
 

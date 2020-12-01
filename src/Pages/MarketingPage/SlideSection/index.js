@@ -11,12 +11,12 @@ import {
   Main,
 } from "./style";
 import CustomCard from "../../../Components/Card";
-import image from "../../../Images/3746-Ahuriri-Valley-North-Otago-Shaun-Jeffers.JPG";
-import image1 from "../../../Images/0013-Springfield-Canterbury-Matt-Crawford-min.jpg";
-import image2 from "../../../Images/45-Aoraki-Lake-Pukaki-Will-Patino-min.jpg";
-import image3 from "../../../Images/48-Milford-Sound-Will-Patino-min.jpg";
-import image4 from "../../../Images/0914-Castlepoint-Wairarapa-Daniel-Rood-min.jpg";
-import image5 from "../../../Images/8399-Wanaka-Miles-Holden-min.jpg";
+import image from "../../../Images/Optimized-3746-Ahuriri-Valley-North-Otago-Shaun-Jeffers.JPG";
+import image1 from "../../../Images/Optimized-0013-Springfield-Canterbury-Matt-Crawford-min.jpg";
+import image2 from "../../../Images/Optimized-45-Aoraki-Lake-Pukaki-Will-Patino-min.jpg";
+import image3 from "../../../Images/Optimized-48-Milford-Sound-Will-Patino-min.jpg";
+import image4 from "../../../Images/Optimized-0914-Castlepoint-Wairarapa-Daniel-Rood-min.jpg";
+import image5 from "../../../Images/Optimized-8399-Wanaka-Miles-Holden-min.jpg";
 
 /* Functions */
 
