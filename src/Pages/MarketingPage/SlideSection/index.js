@@ -55,7 +55,7 @@ export default function SlideSection() {
       <GlobalStyle />
       <Main>
         <BumperSection>
-          <h2>Explore New Zealand In Your Own Way</h2>
+          <h2>Start Exploring Wherever You Want</h2>
         </BumperSection>
         <HorizontalSection>
           <HorizontalScroll>

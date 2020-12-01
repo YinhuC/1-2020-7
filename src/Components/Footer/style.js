@@ -26,7 +26,7 @@ export const FooterLinks = styled.a`
   color: lightgray;
   margin: 20px 0 0 0;
   &:hover {
-    color: lightgray;
+    color: #e8e8e8;
     text-decoration: none;
   }
 `;

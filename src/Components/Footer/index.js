@@ -13,7 +13,7 @@ function Footer() {
     <FooterContainer>
       <Container style={{ marginBottom: "150px" }}>
         <Row>
-          <Col className="col-12 col-md-6 d-flex flex-column">
+          <Col className="col-12 col-md-3 d-flex flex-column">
             <FooterText>Useful Links</FooterText>
             <FooterLinks
               href="https://www.tourismnewzealand.com/"
@@ -35,7 +35,7 @@ function Footer() {
             </FooterLinks>
           </Col>
 
-          <Col className="col-12 col-md-6 pl-5 d-flex  flex-column">
+          <Col className="col-12 col-md-9 pl-5 d-flex  flex-column">
             <FooterText>
               This web application was designed as a personal project to promote
               tourism, and to start encoruaging New Zealanders to travel within
