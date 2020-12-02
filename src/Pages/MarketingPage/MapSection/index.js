@@ -18,7 +18,7 @@ function MapSection() {
   return (
     <>
       <BumperSection>
-        <h2>Plan Your Joruney</h2>
+        <h2>Plan Your Journey</h2>
       </BumperSection>
       <OuterContainer>
         <InnerContainer>
