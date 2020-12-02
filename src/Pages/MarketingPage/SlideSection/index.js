@@ -64,9 +64,6 @@ export default function SlideSection() {
             </CardsContainer>
           </HorizontalScroll>
         </HorizontalSection>
-        <BumperSection>
-          <h2>Start the Adventure</h2>
-        </BumperSection>
       </Main>
     </div>
   );

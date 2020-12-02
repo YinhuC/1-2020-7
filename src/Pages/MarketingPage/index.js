@@ -5,6 +5,7 @@ import React from "react";
 import HeaderSection from "./HeaderSection";
 import SlideSection from "./SlideSection";
 import CovidSection from "./CovidSection";
+import MapSection from "./MapSection";
 
 /* Functions */
 
@@ -13,6 +14,7 @@ function MarketingPage() {
     <>
       <HeaderSection />
       <SlideSection />
+      <MapSection />
       <CovidSection />
     </>
   );

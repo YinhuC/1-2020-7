@@ -16,7 +16,7 @@ function CovidSection() {
       <Container>
         <Row className="d-flex flex-column">
           <Col className="text-center">
-            <h2>Before You Go</h2>
+            <h2 style={{ userSelect: "none" }}>Before You Go</h2>
             <Alert
               theme="warning"
               style={{ color: "black", fontWeight: "bold", marginTop: "50px" }}
