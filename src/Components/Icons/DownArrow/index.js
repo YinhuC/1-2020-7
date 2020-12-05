@@ -9,10 +9,10 @@ export const DownArrow = () => {
 
   return (
     <Main
-      onMouseEnter={() => setType("menu")}
+      onMouseEnter={() => setType("expand")}
       onMouseLeave={() => setType("default")}
       smooth={true}
-      duration={1000}
+      duration={600}
       to="slide"
     >
       <IconContext.Provider value={{ color: "white", size: "40px" }}>

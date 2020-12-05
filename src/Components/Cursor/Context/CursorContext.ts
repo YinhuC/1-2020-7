@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-export type CursorLookType = "default" | "menu";
+export type CursorLookType = "default" | "expand";
 
 export type CursorType = {
   type: CursorLookType;

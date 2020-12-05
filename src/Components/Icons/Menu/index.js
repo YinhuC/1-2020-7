@@ -8,7 +8,7 @@ export const MenuIcon = ({ color }) => {
 
   return (
     <div
-      onMouseEnter={() => setType("menu")}
+      onMouseEnter={() => setType("expand")}
       onMouseLeave={() => setType("default")}
     >
       <IconContext.Provider value={{ color: color, size: "40px" }}>
