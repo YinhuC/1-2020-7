@@ -38,9 +38,14 @@ export default ({ children }) => {
   };
 
   useEffect(() => {
-    handleDynamicHeight(objectRef, setDynamicHeight);
-    window.addEventListener("resize", resizeHandler);
-    applyScrollListener(containerRef, setTranslateX);
+    if (
+      typeof containerRef.current.offsetTop !== "undefined" &&
+      containerRef.current.offsetTop !== null
+    ) {
+      handleDynamicHeight(objectRef, setDynamicHeight);
+      window.addEventListener("resize", resizeHandler);
+      applyScrollListener(containerRef, setTranslateX);
+    }
   }, []);
 
   return (
