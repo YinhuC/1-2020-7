@@ -1,5 +1,5 @@
 /* Third Party */
-import React from "react";
+import React, { useContext } from "react";
 import { Col, Row } from "reactstrap";
 
 /* Components */
@@ -11,12 +11,18 @@ import {
   Header,
   Subheader,
 } from "./style";
+import CursorContext from "../Cursor/Context/CursorContext";
 
 /* Functions */
 
 function CustomCard({ image, header, subheader }) {
+  const { setType } = useContext(CursorContext);
+
   return (
-    <ImageContainer>
+    <ImageContainer
+      onMouseEnter={() => setType("expand")}
+      onMouseLeave={() => setType("default")}
+    >
       <Overlay>
         <TopContainer>
           <Row className="d-flex flex-column">

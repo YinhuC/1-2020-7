@@ -9,13 +9,13 @@ export const CardImage = styled.div`
 
   &:hover {
     transform: rotate(5deg) scale(1.15);
-    opacity: 0.5;
+    opacity: 0.3;
   }
   transition: all 1s ease;
 `;
 
 export const ImageContainer = styled.div`
-  width: 900px;
+  width: 1200px;
   height: 60%;
   position: relative;
   overflow: hidden;

@@ -11,36 +11,55 @@ import {
   Main,
 } from "./style";
 import CustomCard from "../../../Components/Card";
-import image from "../../../Images/Optimized-3746-Ahuriri-Valley-North-Otago-Shaun-Jeffers.JPG";
-import image1 from "../../../Images/Optimized-0013-Springfield-Canterbury-Matt-Crawford-min.jpg";
-import image2 from "../../../Images/Optimized-45-Aoraki-Lake-Pukaki-Will-Patino-min.jpg";
-import image3 from "../../../Images/Optimized-48-Milford-Sound-Will-Patino-min.jpg";
-import image4 from "../../../Images/Optimized-0914-Castlepoint-Wairarapa-Daniel-Rood-min.jpg";
-import image5 from "../../../Images/Optimized-8399-Wanaka-Miles-Holden-min.jpg";
+import image1 from "../../../Images/Optimized-20-Napier-Hawkes-Bay-Graeme-Murray-min.jpg";
+import image2 from "../../../Images/Optimized-5552-Dunedin-Otago-MilesHolden-min.jpg";
+import image3 from "../../../Images/Optimized-8139-PonsonbyCentral-Auckland-MilesHolden-min.jpg";
+import image4 from "../../../Images/Optimized-AC102-Lake-Pukaki-Canterbury-Miles-Holden-min.jpg";
+import image5 from "../../../Images/Optimized-AS39-Marlborough-Sounds-Marlborough-Rob-Suisted-min.jpg";
+import image6 from "../../../Images/Optimized-CU38-Hobbiton-Matamata--Waikato-Ian-Brodie-min.jpg";
+import image7 from "../../../Images/Optimized-EX22051_Abel_Tasman_Fraser_Clements-min.jpg";
+import image8 from "../../../Images/Optimized-L137-Rippon-Vineyard-Lake-Wanaka-David-Wall-min.jpg";
+import image9 from "../../../Images/Optimized-Lake-Rotorua-Julian-Apse-min.jpg";
 
 /* Functions */
 
 /*https://sudo.isl.co/translate-vertical-horizontal/*/
 
 export default function SlideSection() {
-  const info = [
-    "Ahuriri Valley",
-    "Springfield",
-    "Aoraki Mount Cook National Park",
-    "Milford Sound",
-    "Castlepoint",
-    "Roys Peak",
-  ];
   const location = [
-    "North Otago",
-    "Canterbury",
+    "Lake Rotorua",
+    "Napier",
+    "Dunedin",
+    "Ponsonby Central",
     "Lake Pukaki",
-    "Fiordland",
-    "Wairarapa",
-    "Wanaka",
+    "Marlborough Sounds",
+    "Hobbiton",
+    "Split Apple Rock",
+    "Rippon Vineyard",
   ];
-  const arrayImages = [image, image1, image2, image3, image4, image5];
-  const SampleCards = React.memo(() =>
+  const info = [
+    "Rotorua",
+    "Hawke's Bay",
+    "Otago",
+    "Auckland",
+    "Canterbury",
+    "Marlborough",
+    "Waikato",
+    "Nelson Tasman",
+    "Lake Wanaka",
+  ];
+  const arrayImages = [
+    image9,
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+  ];
+  const Cards = React.memo(() =>
     arrayImages.map((currentImage, i) => (
       <CustomCard
         image={currentImage}
@@ -60,7 +79,7 @@ export default function SlideSection() {
         <HorizontalSection>
           <HorizontalScroll>
             <CardsContainer>
-              <SampleCards />
+              <Cards />
             </CardsContainer>
           </HorizontalScroll>
         </HorizontalSection>
