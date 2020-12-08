@@ -67,6 +67,7 @@ export default function SlideSection() {
         header={location[i]}
         subheader={info[i]}
         key={`card-${i}`}
+        url={"/location/" + info[i].replace(/\s+/g, "-").toLowerCase()}
       />
     ))
   );

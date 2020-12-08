@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+
 /*https://sudo.isl.co/translate-vertical-horizontal/*/
 
 export const GlobalStyle = createGlobalStyle`

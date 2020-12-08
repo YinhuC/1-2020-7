@@ -15,14 +15,14 @@ import CursorContext from "../Cursor/Context/CursorContext";
 
 /* Functions */
 
-function CustomCard({ image, header, subheader }) {
+function CustomCard({ image, header, subheader, url }) {
   const { setType } = useContext(CursorContext);
 
   return (
     <ImageContainer
       onMouseEnter={() => setType("expand")}
       onMouseLeave={() => setType("default")}
-      href="/location"
+      href={url}
     >
       <Overlay>
         <TopContainer>
