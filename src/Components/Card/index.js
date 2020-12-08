@@ -22,7 +22,7 @@ function CustomCard({ image, header, subheader }) {
     <ImageContainer
       onMouseEnter={() => setType("expand")}
       onMouseLeave={() => setType("default")}
-      href="/location/:header"
+      href="/location"
     >
       <Overlay>
         <TopContainer>

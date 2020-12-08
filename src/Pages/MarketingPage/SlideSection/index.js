@@ -13,7 +13,7 @@ import {
 import CustomCard from "../../../Components/Card";
 import image1 from "../../../Images/Optimized-20-Napier-Hawkes-Bay-Graeme-Murray-min.jpg";
 import image2 from "../../../Images/Optimized-5552-Dunedin-Otago-MilesHolden-min.jpg";
-import image3 from "../../../Images/Optimized-8139-PonsonbyCentral-Auckland-MilesHolden-min.jpg";
+import image3 from "../../../Images/U087-Devonport-Auckland-Tourism-New-Zealand-min.jpg";
 import image4 from "../../../Images/Optimized-AC102-Lake-Pukaki-Canterbury-Miles-Holden-min.jpg";
 import image5 from "../../../Images/Optimized-AS39-Marlborough-Sounds-Marlborough-Rob-Suisted-min.jpg";
 import image6 from "../../../Images/Optimized-CU38-Hobbiton-Matamata--Waikato-Ian-Brodie-min.jpg";
@@ -30,7 +30,7 @@ export default function SlideSection() {
     "Lake Rotorua",
     "Napier",
     "Dunedin",
-    "Ponsonby Central",
+    "Devonport",
     "Lake Pukaki",
     "Marlborough Sounds",
     "Hobbiton",
@@ -59,16 +59,18 @@ export default function SlideSection() {
     image7,
     image8,
   ];
+
   const Cards = React.memo(() =>
     arrayImages.map((currentImage, i) => (
       <CustomCard
         image={currentImage}
         header={location[i]}
         subheader={info[i]}
-        key={`sampleCard-${i}`}
+        key={`card-${i}`}
       />
     ))
   );
+
   return (
     <div className="slide">
       <GlobalStyle />
