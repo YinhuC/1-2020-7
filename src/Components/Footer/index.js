@@ -1,14 +1,17 @@
 /* Third Party */
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Button } from "shards-react";
 
 /* Components */
 import { FooterContainer, Copyright, FooterText, FooterLinks } from "./style";
+import CursorContext from "../Cursor/Context/CursorContext";
 
 /* Functions */
 
 function Footer() {
+  const { setType } = useContext(CursorContext);
+
   return (
     <FooterContainer>
       <Container style={{ marginBottom: "150px" }}>
@@ -55,6 +58,8 @@ function Footer() {
               target="_blank"
               size="lg"
               theme="light"
+              onMouseEnter={() => setType("expand")}
+              onMouseLeave={() => setType("default")}
             >
               Learn More
             </Button>

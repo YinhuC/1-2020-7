@@ -1,16 +1,19 @@
 /* Third Party */
-import React from "react";
+import React, { useContext } from "react";
 import { Row, Col, Container } from "reactstrap";
 import { Button, Alert } from "shards-react";
 
 /* Components */
 import { CovidContainer, DisclaimerText } from "./style";
+import CursorContext from "../../../Components/Cursor/Context/CursorContext";
 
 /* Functions */
 /* need to actually wrap the icon AND cursor for it to change, also need 
 the cursor to be a direct child of cursor manager */
 
 function CovidSection() {
+  const { setType } = useContext(CursorContext);
+
   return (
     <CovidContainer>
       <Container>
@@ -45,6 +48,8 @@ function CovidSection() {
                 boxShadow: "2px 2px 10px gray",
                 margin: "0 0 250px 0",
               }}
+              onMouseEnter={() => setType("expand")}
+              onMouseLeave={() => setType("default")}
             >
               Learn More
             </Button>

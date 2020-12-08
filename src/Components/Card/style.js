@@ -14,7 +14,7 @@ export const CardImage = styled.div`
   transition: all 1s ease;
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.a`
   width: 1200px;
   height: 60%;
   position: relative;
@@ -42,6 +42,7 @@ export const Header = styled.h2`
   display: flex;
   justify-content: flex-end;
 `;
+
 export const Subheader = styled.h4`
   display: flex;
   justify-content: flex-end;

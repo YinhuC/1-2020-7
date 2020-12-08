@@ -19,30 +19,25 @@ function CustomCard({ image, header, subheader }) {
   const { setType } = useContext(CursorContext);
 
   return (
-    <>
-      <a href="/location">
-        <button />
-      </a>
-
-      <ImageContainer
-        onMouseEnter={() => setType("expand")}
-        onMouseLeave={() => setType("default")}
-      >
-        <Overlay>
-          <TopContainer>
-            <Row className="d-flex flex-column">
-              <Col>
-                <Header> {header}</Header>
-              </Col>
-              <Col className="d-flex justify-content-end">
-                <Subheader>{subheader}</Subheader>
-              </Col>
-            </Row>
-          </TopContainer>
-        </Overlay>
-        <CardImage style={{ backgroundImage: `url(${image})` }} />
-      </ImageContainer>
-    </>
+    <ImageContainer
+      onMouseEnter={() => setType("expand")}
+      onMouseLeave={() => setType("default")}
+      href="/location/:header"
+    >
+      <Overlay>
+        <TopContainer>
+          <Row className="d-flex flex-column">
+            <Col>
+              <Header> {header}</Header>
+            </Col>
+            <Col className="d-flex justify-content-end">
+              <Subheader>{subheader}</Subheader>
+            </Col>
+          </Row>
+        </TopContainer>
+      </Overlay>
+      <CardImage style={{ backgroundImage: `url(${image})` }} />
+    </ImageContainer>
   );
 }
 
