@@ -37,11 +37,14 @@ class Header extends React.Component {
         <Center>
           <Container>
             <Row className="mt-5">
-              <Col className="d-flex justify-content-end mt-1 mr-3">
+              <Col className="d-flex justify-content-between mt-1 mr-3">
+                <TourismText style={{ color: this.state.color }}>
+                  Under Production
+                </TourismText>
                 <TourismText style={{ color: this.state.color }}>
                   Promote Tourism NZ
+                  <MenuIcon color={this.state.color} />
                 </TourismText>
-                <MenuIcon color={this.state.color} />
               </Col>
             </Row>
           </Container>

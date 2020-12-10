@@ -39,6 +39,9 @@ function Footer() {
             <FooterLinks href="https://shotcut.org/" target="_blank">
               Shotcut Video Editor
             </FooterLinks>
+            <FooterLinks href="https://icons8.com/" target="_blank">
+              Icons From Icons8
+            </FooterLinks>
           </Col>
 
           <Col className="col-12 col-md-9 pl-5 d-flex flex-column">

@@ -10,6 +10,7 @@ export const MenuIcon = ({ color }) => {
     <div
       onMouseEnter={() => setType("expand")}
       onMouseLeave={() => setType("default")}
+      style={{ margin: "0 0 0 10px" }}
     >
       <IconContext.Provider value={{ color: color, size: "40px" }}>
         <FiMenu />
