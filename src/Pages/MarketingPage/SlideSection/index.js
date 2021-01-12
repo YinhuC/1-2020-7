@@ -1,25 +1,24 @@
 /* Third Party */
-import React from 'react';
+import React from "react";
 
 /* Components */
-import HorizontalScroll from '../../../Components/HorizontalScroll';
+import HorizontalScroll from "../../../Components/HorizontalScroll";
 import {
   BumperSection,
   CardsContainer,
   GlobalStyle,
   HorizontalSection,
   Main,
-} from './style';
-import CustomCard from '../../../Components/Card';
-import image1 from '../../../Images/Optimized-20-Napier-Hawkes-Bay-Graeme-Murray-min.jpg';
-import image2 from '../../../Images/Optimized-5552-Dunedin-Otago-MilesHolden-min.jpg';
-import image3 from '../../../Images/U087-Devonport-Auckland-Tourism-New-Zealand-min.jpg';
-import image4 from '../../../Images/Optimized-AC102-Lake-Pukaki-Canterbury-Miles-Holden-min.jpg';
-import image5 from '../../../Images/Optimized-AS39-Marlborough-Sounds-Marlborough-Rob-Suisted-min.jpg';
-import image6 from '../../../Images/Optimized-CU38-Hobbiton-Matamata--Waikato-Ian-Brodie-min.jpg';
-import image7 from '../../../Images/Optimized-EX22051_Abel_Tasman_Fraser_Clements-min.jpg';
-import image8 from '../../../Images/Optimized-L137-Rippon-Vineyard-Lake-Wanaka-David-Wall-min.jpg';
-import image9 from '../../../Images/Optimized-Lake-Rotorua-Julian-Apse-min.jpg';
+} from "./style";
+import CustomCard from "../../../Components/Card";
+import image1 from "../../../Images/U087-Devonport-Auckland-Tourism-New-Zealand-min.jpg";
+import image2 from "../../../Images/Optimized-Lake-Rotorua-Julian-Apse-min.jpg";
+import image3 from "../../../Images/Optimized-L351-Lake-Taupo-Lake-Taupo-Destination-Lake-Taupo-min.jpg";
+import image4 from "../../../Images/Optimized-L344-Mount-Ruapehu-Ruapehu-Penny-Egleton-min.jpg";
+import image5 from "../../../Images/Optimized-AS39-Marlborough-Sounds-Marlborough-Rob-Suisted-min.jpg";
+import image6 from "../../../Images/Optimized-0864-Glenorchy-Queenstown-Miles-Holden-min.jpg";
+import image7 from "../../../Images/Optimized-9180-Port-Hills-Christchurch-Julian-Apse-min.jpg";
+import image8 from "../../../Images/Optimized-L137-Rippon-Vineyard-Lake-Wanaka-David-Wall-min.jpg";
 
 /* Functions */
 
@@ -27,29 +26,26 @@ import image9 from '../../../Images/Optimized-Lake-Rotorua-Julian-Apse-min.jpg';
 
 export default function SlideSection() {
   const location = [
-    'Auckland',
-    'Rotorua',
-    'Taupo',
-    'Coromandel',
-    'Ruapehu',
-    'Marlborough',
-    'Queenstown',
-    'Christchurch',
-    'Wanaka',
+    "Devonport",
+    "Lake Rotorua",
+    "Lake Taupo",
+    "Mount Ruapehu",
+    "Marlborough Sounds",
+    "Glenorchy",
+    "Port Hills",
+    "Rippon Vineyard",
   ];
   const info = [
-    'Auckland',
-    'Rotorua',
-    'Taupo',
-    'Coromandel',
-    'Ruapehu',
-    'Marlborough',
-    'Queenstown',
-    'Christchurch',
-    'Wanaka',
+    "Auckland",
+    "Rotorua",
+    "Taupo",
+    "Ruapehu",
+    "Marlborough",
+    "Queenstown",
+    "Christchurch",
+    "Wanaka",
   ];
   const arrayImages = [
-    image9,
     image1,
     image2,
     image3,
@@ -67,13 +63,13 @@ export default function SlideSection() {
         header={location[i]}
         subheader={info[i]}
         key={`card-${i}`}
-        url={'/location/' + info[i].replace(/\s+/g, '-').toLowerCase()}
+        url={"/location/" + info[i].replace(/\s+/g, "-").toLowerCase()}
       />
     ))
   );
 
   return (
-    <div className='slide'>
+    <div className="slide">
       <GlobalStyle />
       <Main>
         <BumperSection>
