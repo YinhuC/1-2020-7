@@ -57,7 +57,7 @@ function Footer() {
               more and support tourism in New Zealand.
             </FooterText>
             <Button
-              href="https://www.tourismnewzealand.com/"
+              href="https://www.newzealand.com/int/"
               target="_blank"
               size="lg"
               theme="light"

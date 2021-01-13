@@ -51,7 +51,7 @@ function CovidSection() {
               onMouseEnter={() => setType("expand")}
               onMouseLeave={() => setType("default")}
             >
-              Learn More
+              Click Here
             </Button>
           </Col>
         </Row>

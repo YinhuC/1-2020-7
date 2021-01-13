@@ -14,7 +14,7 @@ export const Link = styled.a`
 export const ListItem = styled(ListGroupItem)`
   display: flex;
   align-items: center;
-  width: 200%;
+  width: 110%;
   &:hover {
     background-color: #f8f8f8;
   }
