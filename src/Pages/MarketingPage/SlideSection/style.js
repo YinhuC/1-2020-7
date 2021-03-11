@@ -26,6 +26,7 @@ export const BumperSection = styled.section`
   padding: 128px 16px;
   background-color: #efefef;
   user-select: none;
+  margin: 0 10px 0 10px;
 `;
 
 export const CardsContainer = styled.div`
