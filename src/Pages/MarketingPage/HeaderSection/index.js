@@ -28,13 +28,18 @@ function HeaderSection() {
           <MainContainer>
             <Row></Row>
             <Row>
-              <Col className="col-7">
-                <HeaderContainer>
+              <Col className="col-lg-7">
+                <HeaderContainer className="d-flex d-lg-none justify-content-center flex-column text-center">
+                  Discover <br />
+                  New Zealand
+                  <div style={{ fontSize: "30px" }}>Begin Your Journey</div>
+                </HeaderContainer>
+                <HeaderContainer className="d-none d-lg-flex flex-column">
                   Discover New Zealand
                   <div style={{ fontSize: "30px" }}>Begin Your Journey</div>
                 </HeaderContainer>
               </Col>
-              <Col className="col-5 d-flex justify-content-end mt-2 ">
+              <Col className="col-lg-5 d-none d-lg-flex justify-content-end mt-2 ">
                 <DownArrow />
               </Col>
             </Row>
