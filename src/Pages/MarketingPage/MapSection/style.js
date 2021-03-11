@@ -12,6 +12,7 @@ export const MapContainer = styled.div`
   background-image: url(${map});
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   width: 100%;
   height: 90vh;
   margin: 10vh 0 10vh 0;

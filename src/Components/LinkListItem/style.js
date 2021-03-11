@@ -15,6 +15,11 @@ export const ListItem = styled(ListGroupItem)`
   display: flex;
   align-items: center;
   width: 110%;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   &:hover {
     background-color: #f8f8f8;
   }
