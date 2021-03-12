@@ -14,7 +14,7 @@ import Header from "../Header";
 
 function LocationPage({ image, locationName, colour }) {
   return (
-    <MainContainer>
+    <MainContainer className="flex-column flex-md-row">
       <Header />
       <ImageContainer
         style={{ backgroundImage: `url(${image})` }}
