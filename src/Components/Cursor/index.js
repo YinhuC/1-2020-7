@@ -23,6 +23,13 @@ export const Cursor = () => {
     distanceY: 0,
     key: -1,
   });
+  var touch = "";
+
+  if (window.matchMedia("(pointer: coarse)").matches) {
+    touch = "d-none";
+  } else {
+    touch = "";
+  }
 
   React.useEffect(() => {
     document.addEventListener("mousemove", (event) => {
@@ -78,7 +85,10 @@ export const Cursor = () => {
   }, []);
 
   return (
-    <div className={`cursor-wrapper ${type}`} style={{ height: "0px" }}>
+    <div
+      className={`cursor-wrapper ${type} ${touch}`}
+      style={{ height: "0px" }}
+    >
       <div className="main-cursor " ref={mainCursor}>
         <div className="main-cursor-background"></div>
       </div>
