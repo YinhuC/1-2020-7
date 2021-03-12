@@ -9,6 +9,7 @@ import {
   GlobalStyle,
   HorizontalSection,
   Main,
+  VerticalContainer,
 } from "./style";
 import CustomCard from "../../../Components/Card";
 import image1 from "../../../Images/U087-Devonport-Auckland-Tourism-New-Zealand-min.jpg";
@@ -75,12 +76,20 @@ export default function SlideSection() {
         <BumperSection>
           <h2>Start Exploring Wherever You Want</h2>
         </BumperSection>
-        <HorizontalSection>
+        <HorizontalSection className="d-none d-md-flex">
           <HorizontalScroll>
             <CardsContainer>
               <Cards />
             </CardsContainer>
           </HorizontalScroll>
+        </HorizontalSection>
+
+        <HorizontalSection className="d-flex d-md-none">
+          <VerticalContainer>
+            <CardsContainer className="vertical-cards-container flex-column">
+              <Cards />
+            </CardsContainer>
+          </VerticalContainer>
         </HorizontalSection>
       </Main>
     </div>

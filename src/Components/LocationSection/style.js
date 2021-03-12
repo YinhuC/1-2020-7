@@ -14,12 +14,12 @@ export const ImageContainer = styled.div`
   background-size: cover;
   background-position-x: center;
   height: 100%;
-  width: 40%;
+  width: 100%;
 `;
 
 export const TopContainer = styled.div`
   height: 100%;
-  width: 60%;
+  width: 100%;
 
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@ export const TopContainer = styled.div`
 
 export const LocationText = styled.div`
   text-transform: uppercase;
-  font-size: 80px;
+  font-size: calc(12px + 3vw);
   font-family: "Krona One";
   color: white;
 `;

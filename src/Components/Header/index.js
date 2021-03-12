@@ -36,15 +36,14 @@ class Header extends React.Component {
       <Fade in={this.state.scrollUp}>
         <Center>
           <Container>
-            <Row className="mt-5">
-              <Col className="d-flex justify-content-between mt-1 mr-3">
-                <TourismText style={{ color: this.state.color }}>
-                  Under Production
-                </TourismText>
+            <Row className="d-flex justify-content-center mt-5">
+              <Col className="col-11 d-none d-md-flex justify-content-start mt-3">
                 <TourismText style={{ color: this.state.color }}>
                   Promote Tourism NZ
-                  <MenuIcon color={this.state.color} />
                 </TourismText>
+              </Col>
+              <Col className="col-1 d-flex justify-content-center mt-3">
+                <MenuIcon color={this.state.color} />
               </Col>
             </Row>
           </Container>
