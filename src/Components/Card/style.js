@@ -41,6 +41,7 @@ export const TopContainer = styled.div`
 export const Header = styled.h2`
   display: flex;
   justify-content: flex-end;
+  text-align: end;
 `;
 
 export const Subheader = styled.h4`
