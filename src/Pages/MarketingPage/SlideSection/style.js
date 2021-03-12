@@ -37,3 +37,15 @@ export const CardsContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
 `;
+
+export const VerticalContainer = styled.div`
+  width: 100%;
+  .image-container {
+    width: 100%;
+    height: 400px;
+    margin: 30px 10px 30px 10px;
+  }
+  .vertical-cards-container {
+    padding: 0 5% 0 5%;
+  }
+`;

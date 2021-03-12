@@ -20,6 +20,7 @@ function CustomCard({ image, header, subheader, url }) {
 
   return (
     <ImageContainer
+      className="image-container"
       onMouseEnter={() => setType("expand")}
       onMouseLeave={() => setType("default")}
       href={url}
