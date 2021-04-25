@@ -29,8 +29,6 @@ export const VideoContainer = styled.div`
 `;
 
 export const BackgroundContainer = styled.div`
-  border: 0.1px solid black;
-
   /* Full height */
   height: 100vh;
   width: 100%;
