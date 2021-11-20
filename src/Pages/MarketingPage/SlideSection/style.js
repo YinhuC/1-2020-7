@@ -31,7 +31,7 @@ export const BumperSection = styled.section`
 export const CardsContainer = styled.div`
   position: relative;
   height: 100%;
-  padding: 0 1% 0 4%;
+  padding: 0 2% 0 7%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
