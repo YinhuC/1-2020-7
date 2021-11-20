@@ -1,5 +1,5 @@
 /* Third Party */
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Row, Col, Container } from 'reactstrap';
 import { Button, Alert } from 'shards-react';
 import { gsap } from 'gsap';
@@ -8,7 +8,6 @@ import SplitText from '../../../Utils/Split3.min.js';
 
 /* Components */
 import { CovidContainer, DisclaimerText } from './style';
-import CursorContext from '../../../Components/Cursor/Context/CursorContext';
 
 /* Functions */
 /* need to actually wrap the icon AND cursor for it to change, also need 
@@ -16,7 +15,6 @@ the cursor to be a direct child of cursor manager */
 
 function CovidSection() {
   gsap.registerPlugin(ScrollTrigger);
-  const { setType } = useContext(CursorContext);
 
   useEffect(() => {
     const split = new SplitText('#disclaimer', {
@@ -49,7 +47,7 @@ function CovidSection() {
               Alert - Warning
             </Alert>
           </Col>
-          <Col>
+          <Col className='d-flex justify-content-center'>
             <DisclaimerText id='disclaimer'>
               The pandemic has caused many lockdowns with the country too afraid
               to explore again. There are businesses that will benefit from more
@@ -71,8 +69,6 @@ function CovidSection() {
                 boxShadow: '2px 2px 10px gray',
                 margin: '0 0 250px 0',
               }}
-              onMouseEnter={() => setType('expand')}
-              onMouseLeave={() => setType('default')}
             >
               Click Here
             </Button>

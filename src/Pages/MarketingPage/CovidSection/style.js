@@ -8,7 +8,11 @@ export const CovidContainer = styled.div`
   background-color: #efefef;
 `;
 
-export const DisclaimerText = styled.h4`
+export const DisclaimerText = styled.p`
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  color: black;
+
   text-align: center;
   user-select: none;
   margin: 0 0 30px 0;
