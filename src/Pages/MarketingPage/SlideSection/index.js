@@ -1,5 +1,7 @@
 /* Third Party */
-import React from 'react';
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 
 /* Components */
 import HorizontalScroll from '../../../Components/HorizontalScroll';
@@ -19,6 +21,23 @@ import { location, info, arrayImages } from './constants';
 /*https://sudo.isl.co/translate-vertical-horizontal/*/
 
 export default function SlideSection() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    gsap.from('#top-slide-bumper', {
+      delay: 0.1,
+      duration: 1,
+      y: 20,
+      opacity: 0,
+      stagger: 0.1,
+      ease: 'power2',
+
+      scrollTrigger: {
+        trigger: '#top-slide-bumper',
+      },
+    });
+  });
+
   const Cards = React.memo(() =>
     arrayImages.map((currentImage, i) => (
       <CustomCard
@@ -36,7 +55,7 @@ export default function SlideSection() {
       <GlobalStyle />
       <Main>
         <BumperSection>
-          <h2>Start Exploring Wherever You Want</h2>
+          <h2 id='top-slide-bumper'>Start Exploring Wherever You Want</h2>
         </BumperSection>
         <HorizontalSection className='d-none d-md-flex'>
           <HorizontalScroll>
