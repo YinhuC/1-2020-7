@@ -1,13 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import * as serviceWorker from "./serviceWorker";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import * as serviceWorker from './serviceWorker';
 
-import App from "./App";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "shards-ui/dist/css/shards.min.css";
-import "./index.css";
+import App from './App';
+import './index.css';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// Third Party
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+// Shards
+import 'shards-ui/dist/css/shards.min.css';
+
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

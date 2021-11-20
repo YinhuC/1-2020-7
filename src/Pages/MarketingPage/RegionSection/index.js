@@ -12,13 +12,16 @@ import { TeaserContainer, BumperSection } from './style';
 function RegionSection() {
   const Teasers = React.memo(() =>
     location.map((currentLocation, i) => (
-      <Col className='col-lg-4 col-md-6 col-sm-12 pb-5 mb-3 d-flex justify-content-center'>
+      <Col
+        key={`teaser-col-${i}`}
+        className='col-lg-4 col-md-6 col-sm-12 pb-5 mb-3 d-flex justify-content-center'
+      >
         <Teaser
           header={header[i]}
           image={imageLinks[i]}
           title={currentLocation}
           text={info[i]}
-          key={`card-${i}`}
+          key={`teaser-${i}`}
           url={'//www.newzealand.com/nz/' + links[i]}
           footer={footer[i]}
         />

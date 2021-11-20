@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CovidContainer = styled.div`
   padding: 200px 10px 0 10px;
@@ -9,9 +9,7 @@ export const CovidContainer = styled.div`
 `;
 
 export const DisclaimerText = styled.h4`
-  display: flex;
   text-align: center;
-  align-items: center;
   user-select: none;
   margin: 0 0 30px 0;
 `;
