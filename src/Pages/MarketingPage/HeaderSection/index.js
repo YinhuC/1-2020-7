@@ -41,10 +41,15 @@ function HeaderSection() {
             <Row></Row>
             <Row>
               <Col className='col-lg-7'>
-                <HeaderContainer className='d-flex d-lg-none justify-content-center flex-column text-center'>
+                <HeaderContainer
+                  id='discover-hero'
+                  className='d-flex d-lg-none justify-content-center flex-column text-center'
+                >
                   Discover <br />
                   New Zealand
-                  <div style={{ fontSize: '30px' }}>Begin Your Journey</div>
+                  <div id='begin-journey-hero' style={{ fontSize: '30px' }}>
+                    Begin Your Journey
+                  </div>
                 </HeaderContainer>
                 <HeaderContainer
                   id='discover-hero'
