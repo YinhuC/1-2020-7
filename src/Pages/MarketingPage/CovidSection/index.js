@@ -1,5 +1,5 @@
 /* Third Party */
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Row, Col, Container } from 'reactstrap';
 import { Button, Alert } from 'shards-react';
 import { gsap } from 'gsap';
@@ -18,23 +18,20 @@ function CovidSection() {
   gsap.registerPlugin(ScrollTrigger);
   const { setType } = useContext(CursorContext);
 
-  const text = useRef();
-
   useEffect(() => {
     const split = new SplitText('#disclaimer', {
       type: 'lines',
     });
 
-    gsap.from(split.lines, {
+    gsap.from(['#covid-title', split.lines, '#covid-button'], {
       duration: 1,
-      y: 30,
+      y: 20,
       opacity: 0,
       stagger: 0.1,
       ease: 'power2',
 
       scrollTrigger: {
         trigger: '#disclaimer',
-        markers: true,
       },
     });
   });
@@ -43,10 +40,8 @@ function CovidSection() {
     <CovidContainer>
       <Container>
         <Row className='d-flex flex-column'>
-          <Col className='text-center'>
-            <h2 ref={text} style={{ userSelect: 'none' }}>
-              Before You Go
-            </h2>
+          <Col id='covid-title' className='text-center'>
+            <h2 style={{ userSelect: 'none' }}>Before You Go</h2>
             <Alert
               theme='warning'
               style={{ color: 'black', fontWeight: 'bold', marginTop: '50px' }}
@@ -66,6 +61,7 @@ function CovidSection() {
           </Col>
           <Col className='d-flex justify-content-center'>
             <Button
+              id='covid-alert'
               href='https://covid19.govt.nz/'
               target='_blank'
               size='lg'

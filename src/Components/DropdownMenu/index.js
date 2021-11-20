@@ -1,9 +1,8 @@
 /* Third Party */
-import React from "react";
-import { Row, Col, Container } from "reactstrap";
+import React from 'react';
 
 /* Components */
-import { Center } from "./style";
+import { Center } from './style';
 
 /* Functions */
 
@@ -12,7 +11,7 @@ class DropdownMenu extends React.Component {
     return (
       <>
         <Center
-          id="dropdown"
+          id='dropdown'
           style={{ height: `${this.props.menuHeight}%` }}
         ></Center>
       </>

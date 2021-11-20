@@ -1,6 +1,7 @@
 /* Third Party */
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Row, Col } from 'reactstrap';
+import { gsap } from 'gsap';
 
 /* Components */
 import {
@@ -18,6 +19,17 @@ import { DownArrow } from '../../../Components/Icons/DownArrow';
 the cursor to be a direct child of cursor manager */
 
 function HeaderSection() {
+  useEffect(() => {
+    gsap.from(['#promote-header', '#discover-hero', '#begin-journey-hero'], {
+      delay: 1,
+      duration: 1,
+      y: 20,
+      opacity: 0,
+      stagger: 0.1,
+      ease: 'power2',
+    });
+  });
+
   return (
     <>
       <VideoContainer>
@@ -34,12 +46,20 @@ function HeaderSection() {
                   New Zealand
                   <div style={{ fontSize: '30px' }}>Begin Your Journey</div>
                 </HeaderContainer>
-                <HeaderContainer className='d-none d-lg-flex flex-column'>
+                <HeaderContainer
+                  id='discover-hero'
+                  className='d-none d-lg-flex flex-column'
+                >
                   Discover New Zealand
-                  <div style={{ fontSize: '30px' }}>Begin Your Journey</div>
+                  <div id='begin-journey-hero' style={{ fontSize: '30px' }}>
+                    Begin Your Journey
+                  </div>
                 </HeaderContainer>
               </Col>
-              <Col className='col-lg-5 d-none d-lg-flex justify-content-end mt-2 '>
+              <Col
+                id='discover-hero'
+                className='col-lg-5 d-none d-lg-flex justify-content-end mt-2 '
+              >
                 <DownArrow />
               </Col>
             </Row>
