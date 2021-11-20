@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CardImage = styled.div`
   width: 100%;
@@ -15,8 +15,8 @@ export const CardImage = styled.div`
 `;
 
 export const ImageContainer = styled.a`
-  width: 1200px;
-  height: 60%;
+  width: 1000px;
+  height: 50%;
   position: relative;
   overflow: hidden;
   border-radius: 20px;

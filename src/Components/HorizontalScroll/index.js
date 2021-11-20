@@ -1,16 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 import {
   StickyInnerContainer,
   HorizontalTranslateContainer,
   TallOuterContainer,
-} from "./style";
+} from './style';
 
 /*https://sudo.isl.co/translate-vertical-horizontal/*/
 
 const calcDynamicHeight = (objectWidth) => {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
-  return objectWidth - vw + vh + 150;
+  return (objectWidth - vw) / 3.1 + 150 + vh;
 };
 
 const handleDynamicHeight = (ref, setDynamicHeight) => {
@@ -20,8 +20,8 @@ const handleDynamicHeight = (ref, setDynamicHeight) => {
 };
 
 const applyScrollListener = (ref, setTranslateX) => {
-  window.addEventListener("scroll", () => {
-    const offsetTop = -ref.current.offsetTop;
+  window.addEventListener('scroll', () => {
+    const offsetTop = -ref.current.offsetTop * 3;
     setTranslateX(offsetTop);
   });
 };
@@ -39,7 +39,7 @@ export default ({ children }) => {
 
   useEffect(() => {
     handleDynamicHeight(objectRef, setDynamicHeight);
-    window.addEventListener("resize", resizeHandler);
+    window.addEventListener('resize', resizeHandler);
     applyScrollListener(containerRef, setTranslateX);
   }, []);
 
