@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from 'styled-components';
 
 /*https://sudo.isl.co/translate-vertical-horizontal/*/
 
