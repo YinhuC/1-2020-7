@@ -27,25 +27,11 @@ function RegionSection() {
         trigger: '#bottom-slide-bumper',
       },
     });
-
-    gsap.from(['#teaser-0', '#teaser-1', '#teaser-2'], {
-      delay: 0.5,
-      duration: 1,
-      y: 20,
-      opacity: 0,
-      stagger: 0.1,
-      ease: 'power2',
-
-      scrollTrigger: {
-        trigger: '#teaser-0',
-      },
-    });
   });
 
   const Teasers = React.memo(() =>
     location.map((currentLocation, i) => (
       <Col
-        id={`teaser-col-${i}`}
         key={`teaser-col-${i}`}
         className='col-xl-4 col-lg-6 col-sm-12 pb-5 mb-3 d-flex justify-content-center'
       >
