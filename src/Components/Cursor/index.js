@@ -1,9 +1,9 @@
 /* Third Party */
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from 'react';
 
 /* Components */
-import CursorContext from "./Context/CursorContext";
-import "./style.scss";
+import CursorContext from './Context/CursorContext';
+import './style.scss';
 
 /* Functions */
 
@@ -23,16 +23,16 @@ export const Cursor = () => {
     distanceY: 0,
     key: -1,
   });
-  var touch = "";
+  var touch = '';
 
-  if (window.matchMedia("(pointer: coarse)").matches) {
-    touch = "d-none";
+  if (window.matchMedia('(pointer: coarse)').matches) {
+    touch = 'd-none';
   } else {
-    touch = "";
+    touch = '';
   }
 
-  React.useEffect(() => {
-    document.addEventListener("mousemove", (event) => {
+  useEffect(() => {
+    document.addEventListener('mousemove', (event) => {
       const { clientX, clientY } = event;
 
       const mouseX = clientX;
@@ -47,10 +47,12 @@ export const Cursor = () => {
       }px, ${mouseY - mainCursor.current.clientHeight / 2}px, 0)`;
     });
 
-    return () => {};
+    return function cleanup() {
+      window.removeEventListener('mousemove');
+    };
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const followMouse = () => {
       positionRef.current.key = requestAnimationFrame(followMouse);
       const {
@@ -82,18 +84,22 @@ export const Cursor = () => {
       secondaryCursor.current.style.transform = `translate3d(${destinationX}px, ${destinationY}px, 0)`;
     };
     followMouse();
+
+    return function cleanup() {
+      cancelAnimationFrame(positionRef.current.key);
+    };
   }, []);
 
   return (
     <div
       className={`cursor-wrapper ${type} ${touch}`}
-      style={{ height: "0px" }}
+      style={{ height: '0px' }}
     >
-      <div className="main-cursor " ref={mainCursor}>
-        <div className="main-cursor-background"></div>
+      <div className='main-cursor ' ref={mainCursor}>
+        <div className='main-cursor-background'></div>
       </div>
-      <div className="secondary-cursor" ref={secondaryCursor}>
-        <div className="cursor-background"></div>
+      <div className='secondary-cursor' ref={secondaryCursor}>
+        <div className='cursor-background'></div>
       </div>
       ;
     </div>

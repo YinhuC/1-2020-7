@@ -25,6 +25,10 @@ class Header extends React.Component {
     document.addEventListener('scroll', this.handleScroll);
   }
 
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this.handleScroll);
+  }
+
   // Handle scroll event to hide or show header
   handleScroll = () => {
     const menuOpen = document.getElementById('dropdown').style.height === '50%';
