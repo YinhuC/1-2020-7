@@ -5,7 +5,8 @@ export const CovidContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 `;
 
 export const DisclaimerText = styled.p`
