@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import { FiMenu } from "react-icons/fi";
-import { IconContext } from "react-icons";
+// import { IconContext } from "react-icons";
 import CursorContext from "../../Cursor/Context/CursorContext";
 
 export const MenuIcon = ({ color }) => {
@@ -10,11 +9,11 @@ export const MenuIcon = ({ color }) => {
     <div
       onMouseEnter={() => setType("expand")}
       onMouseLeave={() => setType("default")}
-      style={{ margin: "0 0 0 10px" }}
+      className="menu"
     >
-      <IconContext.Provider value={{ color: color, size: "40px" }}>
-        <FiMenu />
-      </IconContext.Provider>
+      <span style={{ background: color }}></span>
+      <span style={{ background: color }}></span>
+      <span style={{ background: color }}></span>
     </div>
   );
 };

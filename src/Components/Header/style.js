@@ -20,3 +20,22 @@ export const TourismText = styled.h4`
   margin: 0 10px 0 0;
   user-select: none;
 `;
+
+export const MenuButton = styled.button`
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+`;
