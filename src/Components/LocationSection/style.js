@@ -7,6 +7,7 @@ export const MainContainer = styled.div`
 
   display: flex;
   flex-direction: row;
+  background-color: black;
 `;
 
 export const ImageContainer = styled.div`

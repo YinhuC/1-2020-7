@@ -7,7 +7,7 @@ import './style.scss';
 
 /* Functions */
 
-function Transition() {
+function Transition({ colour }) {
   const transitionRef = useRef(null);
   useEffect(() => {
     gsap.to(transitionRef.current, {
@@ -21,7 +21,7 @@ function Transition() {
     <div>
       <div
         className='transition-effect'
-        style={{ backgroundColor: 'purple' }}
+        style={{ backgroundColor: colour }}
         ref={transitionRef}
       ></div>
     </div>
