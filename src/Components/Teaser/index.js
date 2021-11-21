@@ -52,6 +52,8 @@ function CustomTeaser({ image, header, title, text, footer, url, imageId }) {
     <Teaser>
       <CardHeader>{header}</CardHeader>
       <CardImg
+        onMouseEnter={() => setType('expand')}
+        onMouseLeave={() => setType('default')}
         id={imageId}
         onClick={state !== true ? handleExpand : handleShrink}
         src={image}
