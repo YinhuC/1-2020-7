@@ -14,13 +14,13 @@ import { Cursor } from './Components/Cursor';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Error from './Pages/ErrorPage';
-import MainComponent from './Components/LocationSection';
+import LocationComponent from './Components/LocationSection';
 import { locationRoutes } from './Pages/LocationPages/constants';
 
 const routes = [
   {
     path: '/',
-    name: 'Marketing Page',
+    name: 'MarketingPage',
     Component: MarketingPage,
   },
 ];
@@ -49,7 +49,7 @@ function App() {
               path={'/location/' + route.path}
               exact={route.exact}
             >
-              <MainComponent
+              <LocationComponent
                 image={route.image}
                 locationName={route.path}
                 colour={route.color}
