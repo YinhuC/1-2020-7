@@ -1,5 +1,5 @@
 /* Third Party */
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Col, Row } from 'reactstrap';
 import Teaser from '../../../Components/Teaser';
 import { location, info, imageLinks, links, footer, header } from './constants';
@@ -14,8 +14,10 @@ import { TeaserContainer, BumperSection } from './style';
 function RegionSection() {
   gsap.registerPlugin(ScrollTrigger);
 
+  const bottomSlideBumper = useRef(null);
+
   useEffect(() => {
-    gsap.from('#bottom-slide-bumper', {
+    gsap.from(bottomSlideBumper.current, {
       delay: 0.1,
       duration: 1,
       y: 20,
@@ -24,7 +26,7 @@ function RegionSection() {
       ease: 'power2',
 
       scrollTrigger: {
-        trigger: '#bottom-slide-bumper',
+        trigger: bottomSlideBumper.current,
       },
     });
   });
@@ -52,7 +54,7 @@ function RegionSection() {
   return (
     <>
       <BumperSection>
-        <h2 id='bottom-slide-bumper'>Plan Your Journey</h2>
+        <h2 ref={bottomSlideBumper}>Plan Your Journey</h2>
       </BumperSection>
       <TeaserContainer>
         <Row>

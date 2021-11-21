@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MainContainer = styled.div`
   /* Full height */
@@ -7,6 +7,7 @@ export const MainContainer = styled.div`
 
   display: flex;
   flex-direction: row;
+  background-color: black;
 `;
 
 export const ImageContainer = styled.div`
@@ -30,6 +31,6 @@ export const TopContainer = styled.div`
 export const LocationText = styled.div`
   text-transform: uppercase;
   font-size: calc(12px + 3vw);
-  font-family: "Krona One";
+  font-family: 'Krona One';
   color: white;
 `;

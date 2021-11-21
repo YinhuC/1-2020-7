@@ -59,7 +59,7 @@ function CovidSection() {
           </Col>
           <Col className='d-flex justify-content-center'>
             <Button
-              id='covid-alert'
+              id='covid-button'
               href='https://covid19.govt.nz/'
               target='_blank'
               size='lg'

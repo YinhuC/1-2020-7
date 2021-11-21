@@ -1,5 +1,5 @@
 /* Third Party */
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
@@ -23,8 +23,10 @@ import { location, info, arrayImages } from './constants';
 export default function SlideSection() {
   gsap.registerPlugin(ScrollTrigger);
 
+  const topSlideBumper = useRef(null);
+
   useEffect(() => {
-    gsap.from('#top-slide-bumper', {
+    gsap.from(topSlideBumper.current, {
       delay: 0.1,
       duration: 1,
       y: 20,
@@ -33,7 +35,7 @@ export default function SlideSection() {
       ease: 'power2',
 
       scrollTrigger: {
-        trigger: '#top-slide-bumper',
+        trigger: topSlideBumper.current,
       },
     });
   });
@@ -55,7 +57,7 @@ export default function SlideSection() {
       <GlobalStyle />
       <Main>
         <BumperSection>
-          <h2 id='top-slide-bumper'>Start Exploring Wherever You Want</h2>
+          <h2 ref={topSlideBumper}>Start Exploring Wherever You Want</h2>
         </BumperSection>
         <HorizontalSection className='d-none d-md-flex'>
           <HorizontalScroll>

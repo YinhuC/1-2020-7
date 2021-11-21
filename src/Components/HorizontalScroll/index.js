@@ -19,13 +19,6 @@ const handleDynamicHeight = (ref, setDynamicHeight) => {
   setDynamicHeight(dynamicHeight);
 };
 
-const applyScrollListener = (ref, setTranslateX) => {
-  window.addEventListener('scroll', () => {
-    const offsetTop = -ref.current.offsetTop * 3;
-    setTranslateX(offsetTop);
-  });
-};
-
 export default ({ children }) => {
   const [dynamicHeight, setDynamicHeight] = useState(null);
   const [translateX, setTranslateX] = useState(0);
@@ -37,10 +30,18 @@ export default ({ children }) => {
     handleDynamicHeight(objectRef, setDynamicHeight);
   };
 
+  const calculateX = () => {
+    const offsetTop = -containerRef.current.offsetTop * 3;
+    setTranslateX(offsetTop);
+  };
+
   useEffect(() => {
     handleDynamicHeight(objectRef, setDynamicHeight);
     window.addEventListener('resize', resizeHandler);
-    applyScrollListener(containerRef, setTranslateX);
+    window.addEventListener('scroll', calculateX);
+    return function cleanup() {
+      window.removeEventListener('scroll', calculateX);
+    };
   }, []);
 
   return (

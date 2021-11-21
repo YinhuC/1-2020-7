@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const CardImage = styled.div`
   width: 100%;
@@ -14,7 +15,7 @@ export const CardImage = styled.div`
   transition: all 1s ease;
 `;
 
-export const ImageContainer = styled.a`
+export const ImageContainer = styled(Link)`
   width: 1000px;
   height: 50%;
   position: relative;
