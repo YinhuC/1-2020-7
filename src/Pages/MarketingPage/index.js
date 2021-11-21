@@ -6,7 +6,6 @@ import HeaderSection from './HeaderSection';
 import SlideSection from './SlideSection';
 import CovidSection from './CovidSection';
 import RegionSection from './RegionSection';
-// import MapSection from './MapSection';
 import { Main } from './style';
 
 /* Functions */
@@ -16,7 +15,6 @@ function MarketingPage() {
     <Main>
       <HeaderSection />
       <SlideSection />
-      {/* <MapSection /> */}
       <RegionSection />
       <CovidSection />
     </Main>

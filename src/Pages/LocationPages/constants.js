@@ -7,7 +7,7 @@ import image6 from '../../Images/Optimized-0864-Glenorchy-Queenstown-Miles-Holde
 import image7 from '../../Images/Optimized-9180-Port-Hills-Christchurch-Julian-Apse-min.jpg';
 import image8 from '../../Images/Optimized-L137-Rippon-Vineyard-Lake-Wanaka-David-Wall-min.jpg';
 
-export const routes = [
+export const locationRoutes = [
   {
     color: 'rgb(82, 158, 203)',
     image: image1,

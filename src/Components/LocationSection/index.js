@@ -1,5 +1,5 @@
 /* Third Party */
-import React from "react";
+import React from 'react';
 
 /* Components */
 import {
@@ -7,15 +7,13 @@ import {
   ImageContainer,
   TopContainer,
   LocationText,
-} from "./style";
-import Header from "../Header";
+} from './style';
 
 /* Functions */
 
 function LocationPage({ image, locationName, colour }) {
   return (
-    <MainContainer className="flex-column flex-md-row">
-      <Header />
+    <MainContainer className='flex-column flex-md-row'>
       <ImageContainer
         style={{ backgroundImage: `url(${image})` }}
       ></ImageContainer>

@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BumperSection = styled.section`
   text-align: center;
-  padding: 128px 16px;
+  padding: 200px 16px 0 16px;
   background-color: #efefef;
   user-select: none;
   background-color: black;
