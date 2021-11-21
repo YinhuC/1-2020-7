@@ -1,5 +1,5 @@
 /* Third Party */
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import {
   CardHeader,
   CardTitle,
@@ -10,17 +10,52 @@ import {
 } from 'shards-react';
 import { Teaser, TextBody } from './style';
 import CursorContext from '../Cursor/Context/CursorContext';
+import { gsap } from 'gsap';
+
 /* Components */
+import {
+  expandedLeft,
+  expandedMiddle,
+  expandedRight,
+  shrunk,
+} from './constants';
 
 /* Functions */
 
-function CustomTeaser({ image, header, title, text, footer, url }) {
+function CustomTeaser({ image, header, title, text, footer, url, imageId }) {
   const { setType } = useContext(CursorContext);
+  const [state, setState] = useState(false);
+
+  const modID = (parseInt(imageId.split('-')[1]) + 1) % 3;
+
+  console.log();
+
+  const handleExpand = () => {
+    if (window.innerWidth >= 1200) {
+      if (modID === 0) gsap.to(`#${imageId}`, expandedRight);
+      else if (modID === 1) gsap.to(`#${imageId}`, expandedLeft);
+      else gsap.to(`#${imageId}`, expandedMiddle);
+      setState(true);
+    }
+  };
+
+  const handleShrink = () => {
+    if (window.innerWidth >= 1200) {
+      if (modID === 0) gsap.to(`#${imageId}`, shrunk);
+      else if (modID === 1) gsap.to(`#${imageId}`, shrunk);
+      else gsap.to(`#${imageId}`, shrunk);
+      setState(false);
+    }
+  };
 
   return (
     <Teaser>
       <CardHeader>{header}</CardHeader>
-      <CardImg src={image} />
+      <CardImg
+        id={imageId}
+        onClick={state !== true ? handleExpand : handleShrink}
+        src={image}
+      />
       <CardBody className='d-flex flex-column'>
         <CardTitle>{title}</CardTitle>
         <TextBody>{text}</TextBody>

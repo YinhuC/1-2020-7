@@ -45,9 +45,9 @@ function RegionSection() {
   const Teasers = React.memo(() =>
     location.map((currentLocation, i) => (
       <Col
-        id={`teaser-${i}`}
+        id={`teaser-col-${i}`}
         key={`teaser-col-${i}`}
-        className='col-lg-4 col-md-6 col-sm-12 pb-5 mb-3 d-flex justify-content-center'
+        className='col-xl-4 col-lg-6 col-sm-12 pb-5 mb-3 d-flex justify-content-center'
       >
         <Teaser
           header={header[i]}
@@ -55,6 +55,7 @@ function RegionSection() {
           title={currentLocation}
           text={info[i]}
           key={`teaser-${i}`}
+          imageId={`teaser-${i}`}
           url={'//www.newzealand.com/nz/' + links[i]}
           footer={footer[i]}
         />
