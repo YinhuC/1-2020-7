@@ -31,24 +31,26 @@ export const Cursor = () => {
     touch = '';
   }
 
+  const mouseEvent = (event) => {
+    const { clientX, clientY } = event;
+
+    const mouseX = clientX;
+    const mouseY = clientY;
+
+    positionRef.current.mouseX =
+      mouseX - secondaryCursor.current.clientWidth / 2;
+    positionRef.current.mouseY =
+      mouseY - secondaryCursor.current.clientHeight / 2;
+    mainCursor.current.style.transform = `translate3d(${
+      mouseX - mainCursor.current.clientWidth / 2
+    }px, ${mouseY - mainCursor.current.clientHeight / 2}px, 0)`;
+  };
+
   useEffect(() => {
-    document.addEventListener('mousemove', (event) => {
-      const { clientX, clientY } = event;
-
-      const mouseX = clientX;
-      const mouseY = clientY;
-
-      positionRef.current.mouseX =
-        mouseX - secondaryCursor.current.clientWidth / 2;
-      positionRef.current.mouseY =
-        mouseY - secondaryCursor.current.clientHeight / 2;
-      mainCursor.current.style.transform = `translate3d(${
-        mouseX - mainCursor.current.clientWidth / 2
-      }px, ${mouseY - mainCursor.current.clientHeight / 2}px, 0)`;
-    });
+    document.addEventListener('mousemove', (event) => mouseEvent(event));
 
     return function cleanup() {
-      window.removeEventListener('mousemove');
+      window.removeEventListener('mousemove', (event) => mouseEvent(event));
     };
   }, []);
 
@@ -86,7 +88,7 @@ export const Cursor = () => {
     followMouse();
 
     return function cleanup() {
-      cancelAnimationFrame(positionRef.key);
+      cancelAnimationFrame(positionRef.current.key);
     };
   }, []);
 

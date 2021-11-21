@@ -8,6 +8,7 @@ import {
   TopContainer,
   LocationText,
 } from './style';
+import Transition from '../../Utils/PageTransition/transition';
 
 /* Functions */
 
@@ -19,6 +20,7 @@ function LocationPage({ image, locationName, colour }) {
 
   return (
     <MainContainer className='flex-column flex-md-row'>
+      <Transition />
       <ImageContainer
         style={{ backgroundImage: `url(${image})` }}
       ></ImageContainer>
