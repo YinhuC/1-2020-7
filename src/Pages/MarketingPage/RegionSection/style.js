@@ -8,6 +8,6 @@ export const TeaserContainer = styled.div`
 export const BumperSection = styled.section`
   text-align: center;
   padding: 128px 16px;
-  background-color: #efefef;
+  background-color: rgb(171, 213, 255);
   user-select: none;
 `;

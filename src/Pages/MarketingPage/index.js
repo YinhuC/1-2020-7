@@ -14,9 +14,9 @@ function MarketingPage() {
   return (
     <Main>
       <HeaderSection />
+      <CovidSection />
       <SlideSection />
       <RegionSection />
-      <CovidSection />
     </Main>
   );
 }
