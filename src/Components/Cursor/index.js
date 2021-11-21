@@ -23,7 +23,7 @@ export const Cursor = () => {
     distanceY: 0,
     key: -1,
   });
-  var touch = '';
+  let touch = '';
 
   if (window.matchMedia('(pointer: coarse)').matches) {
     touch = 'd-none';
