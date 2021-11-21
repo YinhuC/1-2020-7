@@ -35,7 +35,7 @@ function CovidSection() {
   });
 
   return (
-    <CovidContainer>
+    <CovidContainer className='covid'>
       <Container>
         <Row className='d-flex flex-column'>
           <Col id='covid-title' className='text-center'>

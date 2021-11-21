@@ -53,7 +53,7 @@ export default function SlideSection() {
   );
 
   return (
-    <div className='slide'>
+    <div>
       <GlobalStyle />
       <Main>
         <BumperSection>
