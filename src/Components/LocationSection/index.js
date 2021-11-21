@@ -1,5 +1,5 @@
 /* Third Party */
-import React from 'react';
+import React, { useEffect } from 'react';
 
 /* Components */
 import {
@@ -12,6 +12,11 @@ import {
 /* Functions */
 
 function LocationPage({ image, locationName, colour }) {
+  // So page doesn't load halfway down the page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <MainContainer className='flex-column flex-md-row'>
       <ImageContainer

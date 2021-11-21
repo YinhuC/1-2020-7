@@ -23,6 +23,7 @@ function CustomCard({ image, header, subheader, url }) {
       className='image-container'
       onMouseEnter={() => setType('expand')}
       onMouseLeave={() => setType('default')}
+      onClick={() => setType('default')}
       to={url}
     >
       <Overlay>
