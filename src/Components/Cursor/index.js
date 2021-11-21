@@ -88,7 +88,7 @@ export const Cursor = () => {
     followMouse();
 
     return function cleanup() {
-      cancelAnimationFrame(positionRef.current.key);
+      cancelAnimationFrame(positionRef.key);
     };
   }, []);
 

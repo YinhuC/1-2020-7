@@ -11,8 +11,8 @@ function Transition() {
   const transitionRef = useRef(null);
   useEffect(() => {
     gsap.to(transitionRef.current, {
-      duration: 5,
-      x: 2600,
+      duration: 3,
+      x: '100vw',
       ease: 'power4',
     });
   });

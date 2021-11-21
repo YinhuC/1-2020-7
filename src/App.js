@@ -6,8 +6,6 @@ import {
   Switch,
   Redirect,
 } from 'react-router-dom';
-import { CSSTransition } from 'react-transition-group';
-import { gsap } from 'gsap';
 
 /* Components */
 import MarketingPage from './Pages/MarketingPage';
