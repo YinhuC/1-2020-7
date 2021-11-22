@@ -3,12 +3,11 @@ import React, { useContext, useState } from 'react';
 import {
   CardHeader,
   CardTitle,
-  CardImg,
   CardBody,
   CardFooter,
   Button,
 } from 'shards-react';
-import { Teaser, TextBody } from './style';
+import { Teaser, TextBody, CustomCardImg } from './style';
 import CursorContext from '../Cursor/Context/CursorContext';
 import { gsap } from 'gsap';
 
@@ -51,7 +50,7 @@ function CustomTeaser({ image, header, title, text, footer, url, imageId }) {
   return (
     <Teaser>
       <CardHeader>{header}</CardHeader>
-      <CardImg
+      <CustomCardImg
         onMouseEnter={() => setType('expand')}
         onMouseLeave={() => setType('default')}
         id={imageId}

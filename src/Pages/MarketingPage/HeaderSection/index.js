@@ -33,7 +33,7 @@ function HeaderSection() {
   return (
     <>
       <VideoContainer>
-        <BackgroundVideo autoPlay muted loop id='myVideo'>
+        <BackgroundVideo autoPlay playsinline muted loop id='myVideo'>
           <source src={video} type='video/mp4' />
         </BackgroundVideo>
         <BackgroundContainer>
