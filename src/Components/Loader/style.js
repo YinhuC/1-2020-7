@@ -18,9 +18,15 @@ export const LoaderContainer = styled.div`
 `;
 
 export const LoaderTitle = styled.h1`
-  color: white;
+  color: wheat;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-style: italic;
 `;
 
-export const LoaderSubtitle = styled.h2`
-  color: wheat;
+export const LoaderSubtitle = styled.h3`
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 300;
 `;

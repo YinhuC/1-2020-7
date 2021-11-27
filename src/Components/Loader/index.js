@@ -20,7 +20,7 @@ function Loader() {
   return (
     <LoaderContainer>
       <LoaderTitle>Promote Tourism New Zealand</LoaderTitle>
-      <LoaderSubtitle>Travel - Explore - Experience</LoaderSubtitle>
+      <LoaderSubtitle>Travel . Explore . Experience</LoaderSubtitle>
     </LoaderContainer>
   );
 }
