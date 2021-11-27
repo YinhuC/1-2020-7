@@ -6,8 +6,8 @@ import HeaderSection from './HeaderSection';
 import SlideSection from './SlideSection';
 import CovidSection from './CovidSection';
 import RegionSection from './RegionSection';
-import { Main } from './style';
 import ContactSection from './ContactSection';
+import { Main } from './style';
 
 /* Functions */
 

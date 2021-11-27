@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
-export const CovidContainer = styled.section`
-  padding: 200px 10px 0 10px;
+export const ContactContainer = styled.section`
+  width: 100vw;
+
+  border-top: 2px black solid;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,22 +11,34 @@ export const CovidContainer = styled.section`
   min-height: 100vh;
 `;
 
-export const DisclaimerText = styled.p`
-  font-family: 'Inter', sans-serif;
-  font-size: 1.7rem;
-  line-height: 2.2rem;
-  color: black;
+export const ContactText = styled.div`
+  width: 100%;
 
-  text-align: center;
-  user-select: none;
-  margin: 0 0 30px 0;
-`;
-
-export const CovidHeader = styled.div`
-  font-family: 'Inter', sans-serif;
-  font-size: 2.5rem;
-  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  font-size: 6vw;
   font-weight: 400;
   color: black;
-  line-height: 2.8rem;
+  text-transform: uppercase;
+  text-align: center;
+`;
+
+export const Dash = styled.hr`
+  background: black;
+  width: 20vw;
+  height: 0.1rem;
+  margin: 2rem 5rem;
+`;
+
+export const EmailInfo = styled.a`
+  color: wheat;
+  margin: 2rem 0 0 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 4vw;
+  font-weight: 400;
+  text-align: center;
+
+  &:hover {
+    text-decoration: none;
+    color: lightblue;
+  }
 `;
