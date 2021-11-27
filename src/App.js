@@ -1,5 +1,5 @@
 /* Third Party */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 /* Components */
 import CursorManager from './Components/Cursor/Context/manager.tsx';

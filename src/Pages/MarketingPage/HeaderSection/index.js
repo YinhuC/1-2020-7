@@ -19,6 +19,8 @@ import { DownArrow } from '../../../Components/Icons/DownArrow';
 the cursor to be a direct child of cursor manager */
 
 function HeaderSection() {
+  const backgroundColor = 'transparent';
+
   useEffect(() => {
     gsap.from(['#discover-hero', '#begin-journey-hero'], {
       delay: 0.8,
@@ -36,7 +38,7 @@ function HeaderSection() {
         <BackgroundVideo autoPlay playsinline muted loop id='myVideo'>
           <source src={video} type='video/mp4' />
         </BackgroundVideo>
-        <BackgroundContainer>
+        <BackgroundContainer style={{ backgroundColor: backgroundColor }}>
           <MainContainer>
             <Row></Row>
             <Row>

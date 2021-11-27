@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Container } from "reactstrap";
+import styled from 'styled-components';
+import { Container } from 'reactstrap';
 
 export const BackgroundVideo = styled.video`
   position: absolute;
@@ -29,6 +29,8 @@ export const VideoContainer = styled.div`
 `;
 
 export const BackgroundContainer = styled.div`
+  background-color: black;
+
   /* Full height */
   height: 100vh;
   width: 100%;
