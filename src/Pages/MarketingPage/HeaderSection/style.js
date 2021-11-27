@@ -36,11 +36,16 @@ export const BackgroundContainer = styled.div`
   width: 100%;
 `;
 
-export const HeaderContainer = styled.h1`
-  user-select: none;
+export const HeaderContainer = styled.div`
   width: 100%;
-  color: white;
   height: 150px;
+  margin: 0 0 60px 0;
+
+  user-select: none;
+  color: white;
+  font-size: 60px;
+  line-height: 60px;
+  font-family: 'Playfair Display', serif;
 `;
 
 export const MainContainer = styled(Container)`

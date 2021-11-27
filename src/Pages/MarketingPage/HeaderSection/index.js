@@ -58,7 +58,7 @@ function HeaderSection() {
                   className='d-none d-lg-flex flex-column'
                 >
                   Discover New Zealand
-                  <div id='begin-journey-hero' style={{ fontSize: '30px' }}>
+                  <div id='begin-journey-hero' style={{ fontSize: '40px' }}>
                     Begin Your Journey
                   </div>
                 </HeaderContainer>
