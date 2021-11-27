@@ -44,7 +44,7 @@ function CovidSection() {
             </CovidHeader>
             <Alert
               theme='warning'
-              style={{ color: 'black', fontWeight: 'bold', marginTop: '50px' }}
+              style={{ color: 'black', fontWeight: 'bold', marginTop: '30px' }}
             >
               Alert - Warning
             </Alert>

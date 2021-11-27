@@ -22,9 +22,9 @@ export const DisclaimerText = styled.p`
 
 export const CovidHeader = styled.div`
   font-family: 'Inter', sans-serif;
-  font-size: 40px;
+  font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 400;
   color: black;
-  line-height: 10px;
+  line-height: 2.8rem;
 `;

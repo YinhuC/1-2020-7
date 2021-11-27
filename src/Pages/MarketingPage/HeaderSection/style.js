@@ -43,7 +43,7 @@ export const HeaderContainer = styled.div`
 
   user-select: none;
   color: white;
-  font-size: 60px;
+  font-size: 4rem;
   line-height: 60px;
   font-family: 'Playfair Display', serif;
 `;

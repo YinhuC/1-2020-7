@@ -49,7 +49,7 @@ function HeaderSection() {
                 >
                   Discover <br />
                   New Zealand
-                  <div id='begin-journey-hero' style={{ fontSize: '30px' }}>
+                  <div id='begin-journey-hero' style={{ fontSize: '2rem' }}>
                     Begin Your Journey
                   </div>
                 </HeaderContainer>
@@ -58,7 +58,7 @@ function HeaderSection() {
                   className='d-none d-lg-flex flex-column'
                 >
                   Discover New Zealand
-                  <div id='begin-journey-hero' style={{ fontSize: '40px' }}>
+                  <div id='begin-journey-hero' style={{ fontSize: '2.5rem' }}>
                     Begin Your Journey
                   </div>
                 </HeaderContainer>
