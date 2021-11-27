@@ -7,6 +7,7 @@ import SlideSection from './SlideSection';
 import CovidSection from './CovidSection';
 import RegionSection from './RegionSection';
 import { Main } from './style';
+import ContactSection from './ContactSection';
 
 /* Functions */
 
@@ -17,6 +18,7 @@ function MarketingPage() {
       <CovidSection />
       <SlideSection />
       <RegionSection />
+      <ContactSection />
     </Main>
   );
 }
