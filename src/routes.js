@@ -30,7 +30,7 @@ export function Routing() {
     setLoader(true);
     setTimeout(() => {
       setLoader(false);
-    }, 1000);
+    }, 3000);
   }, []);
 
   useEffect(() => {
