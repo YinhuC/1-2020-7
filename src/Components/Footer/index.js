@@ -1,11 +1,11 @@
 /* Third Party */
-import React, { useContext } from "react";
-import { Container, Row, Col } from "reactstrap";
-import { Button } from "shards-react";
+import React, { useContext } from 'react';
+import { Container, Row, Col } from 'reactstrap';
+import { Button } from 'shards-react';
 
 /* Components */
-import { FooterContainer, Copyright, FooterText, FooterLinks } from "./style";
-import CursorContext from "../Cursor/Context/CursorContext";
+import { FooterContainer, Copyright, FooterText, FooterLinks } from './style';
+import CursorContext from '../Cursor/Context/CursorContext';
 
 /* Functions */
 
@@ -14,7 +14,7 @@ function Footer() {
 
   return (
     <FooterContainer>
-      <Container style={{ marginBottom: "150px" }}>
+      <Container style={{ marginBottom: '150px' }}>
         <Row>
           <Col className="col-12 col-lg-3 d-flex flex-column">
             <FooterText>Useful Links</FooterText>
@@ -27,7 +27,7 @@ function Footer() {
             <FooterLinks href="https://visuals.newzealand.com/" target="_blank">
               Visual Library
             </FooterLinks>
-            <FooterLinks href="mailto: snycbusiness@gmail.com" target="_blank">
+            <FooterLinks href="mailto: yinhucui@gmail.com" target="_blank">
               Contact Us
             </FooterLinks>
             <FooterLinks
@@ -61,15 +61,15 @@ function Footer() {
               target="_blank"
               size="lg"
               theme="light"
-              onMouseEnter={() => setType("expand")}
-              onMouseLeave={() => setType("default")}
+              onMouseEnter={() => setType('expand')}
+              onMouseLeave={() => setType('default')}
             >
               Learn More
             </Button>
           </Col>
         </Row>
       </Container>
-      <hr style={{ backgroundColor: "lightgray" }} />
+      <hr style={{ backgroundColor: 'lightgray' }} />
       <Container>
         <Row>
           <Col className="mb-3 text-center">
