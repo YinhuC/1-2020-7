@@ -49,11 +49,11 @@ function Header() {
   };
 
   return (
-    <section id='promote-header'>
+    <section>
       <DropdownMenu menuHeight={isMenuOpen ? '50' : '0'} />
       <Fade in={scrollUp}>
         <Center>
-          <Container>
+          <Container id='promote-header'>
             <Row className='d-flex justify-content-center mt-5'>
               <Col className='col-11 d-none d-md-flex justify-content-start mt-3'>
                 <TourismText
