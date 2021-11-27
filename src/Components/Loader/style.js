@@ -18,15 +18,14 @@ export const LoaderContainer = styled.div`
 `;
 
 export const LoaderTitle = styled.h1`
-  color: wheat;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
-  font-style: italic;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
 `;
 
 export const LoaderSubtitle = styled.h3`
-  color: white;
-  font-family: 'Cormorant Garamond', serif;
+  color: wheat;
+  font-family: 'Playfair Display', serif;
   font-style: italic;
   font-weight: 300;
 `;
