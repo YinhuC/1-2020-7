@@ -20,18 +20,6 @@ const dataFetchReducer = (state, action) => {
         hasErrored: true,
         errorMessage: action.payload,
       };
-    case 'REPLACE_DATA':
-      // The record passed (state.data) must have the attribute "id"
-      const newData = state.data.map((rec) => {
-        return rec.id === action.replacerecord.id ? action.replacerecord : rec;
-      });
-      return {
-        ...state,
-        isLoading: false,
-        hasErrored: false,
-        errorMessage: '',
-        data: newData,
-      };
     default:
       throw new Error();
   }
@@ -79,14 +67,7 @@ const useAxiosFetch = ({ categories, lat, long, maxRadius }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const updateDataRecord = (record) => {
-    dispatch({
-      type: 'REPLACE_DATA',
-      replacerecord: record,
-    });
-  };
-
-  return { ...state, updateDataRecord };
+  return { ...state };
 };
 
 export default useAxiosFetch;
