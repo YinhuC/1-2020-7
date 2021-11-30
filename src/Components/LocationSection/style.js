@@ -1,7 +1,14 @@
 import styled from 'styled-components';
+import { Container } from 'reactstrap';
 
 export const MainContainer = styled.section`
-  /* Full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+`;
+
+export const HeaderContainer = styled.div`
   height: 100vh;
   width: 100%;
 
@@ -34,3 +41,5 @@ export const LocationText = styled.div`
   font-family: 'Playfair Display', serif;
   color: white;
 `;
+
+export const DataContainer = styled(Container)``;
