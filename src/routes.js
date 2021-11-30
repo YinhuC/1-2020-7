@@ -45,11 +45,18 @@ export function Routing() {
 
   return (
     <>
-      <Header />
-
       <Switch>
         <Route key={routes[0].path} exact path={routes[0].path}>
-          {loader ? <Loader /> : <MarketingPage />}
+          {loader ? (
+            <Loader />
+          ) : (
+            <>
+              <Header />
+
+              <MarketingPage />
+              <Footer />
+            </>
+          )}
         </Route>
 
         {locationRoutes.map((route, index) => (
@@ -58,19 +65,24 @@ export function Routing() {
             path={'/location/' + route.path}
             exact={route.exact}
           >
+            <Header />
+
             <LocationComponent
               image={route.image}
               locationName={route.path}
               colour={route.color}
             />
+            <Footer />
           </Route>
         ))}
 
-        <Route path='/404' component={Error} />
+        <Route path='/404'>
+          <Header />
+          <Error />
+          <Footer />
+        </Route>
         <Redirect to='/404' />
       </Switch>
-
-      <Footer />
     </>
   );
 }
