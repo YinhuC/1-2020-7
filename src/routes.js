@@ -8,7 +8,7 @@ import MarketingPage from './Pages/MarketingPage';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import Error from './Pages/ErrorPage';
-import LocationComponent from './Components/LocationSection';
+import LocationComponent from './Pages/LocationPages';
 import { locationRoutes } from './Pages/LocationPages/constants';
 import Loader from './Components/Loader';
 import useScrollMemory from './Utils/useScrollMemory';
