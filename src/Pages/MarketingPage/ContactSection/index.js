@@ -31,7 +31,7 @@ function ContactSection() {
         trigger: headerRef.current,
       },
     });
-  });
+  }, []);
 
   return (
     <ContactContainer className='d-flex flex-sm-row flex-column'>

@@ -40,7 +40,7 @@ function LocationPage({ image, locationName, colour }) {
       x: '-200vh',
       ease: 'power2',
     });
-  });
+  }, []);
 
   return (
     <MainContainer className='flex-column flex-md-row'>

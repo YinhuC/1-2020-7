@@ -41,7 +41,7 @@ export function Routing() {
       opacity: 0,
       ease: 'power2',
     });
-  });
+  }, []);
 
   return (
     <>

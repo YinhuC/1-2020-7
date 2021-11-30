@@ -29,7 +29,7 @@ function RegionSection() {
         trigger: bottomSlideBumper.current,
       },
     });
-  });
+  }, []);
 
   const Teasers = React.memo(() =>
     location.map((currentLocation, i) => (

@@ -15,7 +15,7 @@ function Transition({ colour }) {
       x: '100vw',
       ease: 'power4',
     });
-  });
+  }, []);
 
   return (
     <div>

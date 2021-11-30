@@ -39,7 +39,7 @@ export default function SlideSection() {
         trigger: topSlideBumper.current,
       },
     });
-  });
+  }, []);
 
   const Cards = React.memo(() =>
     arrayImages.map((currentImage, i) => (

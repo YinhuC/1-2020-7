@@ -15,7 +15,7 @@ function Loader() {
     return function cleanup() {
       setType('default');
     };
-  });
+  }, [setType]);
 
   return (
     <>

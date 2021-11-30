@@ -30,7 +30,7 @@ function HeaderSection() {
       stagger: 0.1,
       ease: 'power2',
     });
-  });
+  }, []);
 
   return (
     <section>

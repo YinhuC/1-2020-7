@@ -19,24 +19,26 @@ function Header() {
   const { setType } = useContext(CursorContext);
 
   useEffect(() => {
-    document.addEventListener('scroll', handleScroll);
+    // Handle scroll event to hide or show header
+    const handleScroll = () => {
+      const menuOpen =
+        document.getElementById('dropdown').style.height === '50%';
+      const scrollingUp =
+        window.scrollY > prevScroll && !menuOpen ? false : true;
+      const getColor =
+        window.scrollY > window.innerHeight - 80 && !menuOpen
+          ? 'black'
+          : 'white';
 
+      setScrollUp(scrollingUp);
+      setPrevScroll(window.scrollY);
+      setColor(getColor);
+    };
+    document.addEventListener('scroll', handleScroll);
     return function cleanup() {
       document.removeEventListener('scroll', handleScroll);
     };
-  });
-
-  // Handle scroll event to hide or show header
-  const handleScroll = () => {
-    const menuOpen = document.getElementById('dropdown').style.height === '50%';
-    const scrollingUp = window.scrollY > prevScroll && !menuOpen ? false : true;
-    const getColor =
-      window.scrollY > window.innerHeight - 80 && !menuOpen ? 'black' : 'white';
-
-    setScrollUp(scrollingUp);
-    setPrevScroll(window.scrollY);
-    setColor(getColor);
-  };
+  }, [prevScroll]);
 
   // Update the state when the menu is clicked
   const handleMenuClick = () => {

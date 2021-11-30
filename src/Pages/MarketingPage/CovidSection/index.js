@@ -33,7 +33,7 @@ function CovidSection() {
         trigger: '#disclaimer',
       },
     });
-  });
+  }, []);
 
   return (
     <CovidContainer className='covid'>
