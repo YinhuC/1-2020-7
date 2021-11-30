@@ -67,11 +67,7 @@ export function Routing() {
           >
             <Header />
 
-            <LocationComponent
-              image={route.image}
-              locationName={route.path}
-              colour={route.color}
-            />
+            <LocationComponent route={route} />
             <Footer />
           </Route>
         ))}

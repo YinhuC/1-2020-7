@@ -1,6 +1,7 @@
 /* Third Party */
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import useAxiosFetch from '../../Hooks/useAxiosFetch';
 
 /* Components */
 import {
@@ -9,10 +10,13 @@ import {
   TopContainer,
   LocationText,
 } from './style';
+import { Container } from 'reactstrap';
 
 /* Functions */
 
-function LocationPage({ image, locationName, colour }) {
+function LocationPage({ route }) {
+  const { colour, image, locationName, lat, long } = route;
+
   const locationContainerRef = useRef(null);
   const locationTextRef = useRef(null);
   const imageRef = useRef(null);
@@ -42,6 +46,18 @@ function LocationPage({ image, locationName, colour }) {
     });
   }, []);
 
+  const { data, isLoading, hasErrored, errorMessage } = useAxiosFetch({
+    categories: `"NATURE"`,
+    lat,
+    long,
+    maxRadius: 50000,
+  });
+  if (hasErrored) return <div>{errorMessage}</div>;
+
+  if (isLoading || !data) return <div>Loading...</div>;
+
+  console.log(data);
+
   return (
     <MainContainer className='flex-column flex-md-row'>
       <ImageContainer
@@ -54,6 +70,16 @@ function LocationPage({ image, locationName, colour }) {
       >
         <LocationText ref={locationTextRef}>{locationName}</LocationText>
       </TopContainer>
+
+      <Container>
+        {data.map((item, index) => {
+          return (
+            <div key={index}>
+              {item.name},{item.distance},{item.lat},{item.lng}
+            </div>
+          );
+        })}
+      </Container>
     </MainContainer>
   );
 }

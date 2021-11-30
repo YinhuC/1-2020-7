@@ -6,35 +6,35 @@ import image7 from '../../Images/9180-Port-Hills-Christchurch-Julian-Apse-min.jp
 
 export const locationRoutes = [
   {
-    color: 'rgb(12, 81, 112)',
+    colour: 'rgb(12, 81, 112)',
     image: image1,
     path: 'Auckland',
     lat: -36.8845312,
     long: 174.7535262,
   },
   {
-    color: 'rgb(85, 114, 153)',
+    colour: 'rgb(85, 114, 153)',
     image: image4,
     path: 'Ruapehu',
     lat: -39.2817032,
     long: 175.5597556,
   },
   {
-    color: 'rgb(172, 162, 39)',
+    colour: 'rgb(172, 162, 39)',
     image: image5,
     path: 'Marlborough',
     lat: 41.5733984,
     long: 173.0222946,
   },
   {
-    color: 'rgb(138, 144, 153)',
+    colour: 'rgb(138, 144, 153)',
     image: image6,
     path: 'Queenstown',
     lat: -44.9967032,
     long: 168.6297596,
   },
   {
-    color: 'rgb(130, 125, 109)',
+    colour: 'rgb(130, 125, 109)',
     image: image7,
     path: 'Christchurch',
     lat: -43.5118079,
