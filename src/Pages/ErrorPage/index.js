@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 import { Button } from 'shards-react';
+import useAxiosFetch from '../../Hooks/useAxiosFetch';
 
 /* Components */
 import { BumperSection, ErrorText } from './style';
@@ -10,6 +11,18 @@ import { BumperSection, ErrorText } from './style';
 /* Functions */
 
 function ErrorPage() {
+  const { data, isLoading, hasErrored, errorMessage } = useAxiosFetch({
+    categories: `"NATURE"`,
+    lat: -36.8845312,
+    long: 174.7535262,
+    maxRadius: 50000,
+  });
+  if (hasErrored) return <div>{errorMessage}</div>;
+
+  if (isLoading || !data) return <div>Loading...</div>;
+
+  console.log(data);
+
   return (
     <BumperSection>
       <Container>
