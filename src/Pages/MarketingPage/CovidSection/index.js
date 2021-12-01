@@ -52,8 +52,8 @@ function CovidSection() {
           </Col>
           <Col className='d-flex justify-content-center'>
             <DisclaimerText id='disclaimer'>
-              The pandemic has caused many lockdowns with the country too afraid
-              to explore again. There are businesses that will benefit from more
+              The pandemic has caused lockdowns with the country too afraid to
+              explore again. There are businesses that will benefit from more
               tourism, plus you deserve to relax and travel. However, safety
               should always be put first. If you are sick, get tested and always
               practise social distancing. To learn more about COVID19 and how to
