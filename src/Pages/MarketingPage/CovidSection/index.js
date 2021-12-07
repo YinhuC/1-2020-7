@@ -17,22 +17,25 @@ function CovidSection() {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    const split = new SplitText('#disclaimer', {
-      type: 'lines',
-    });
+    // Add slight delay so the text is split correctly
+    setTimeout(() => {
+      const split = new SplitText('#disclaimer', {
+        type: 'lines',
+      });
 
-    gsap.from(['#covid-title', split.lines, '#covid-button'], {
-      delay: 0.3,
-      duration: 1,
-      y: 20,
-      opacity: 0,
-      stagger: 0.1,
-      ease: 'power2',
+      gsap.from(['#covid-title', split.lines, '#covid-button'], {
+        delay: 0.3,
+        duration: 1,
+        y: 20,
+        opacity: 0,
+        stagger: 0.1,
+        ease: 'power2',
 
-      scrollTrigger: {
-        trigger: '#disclaimer',
-      },
-    });
+        scrollTrigger: {
+          trigger: '#disclaimer',
+        },
+      });
+    }, 100);
   }, []);
 
   return (
