@@ -25,7 +25,7 @@ const dataFetchReducer = (state, action) => {
   }
 };
 
-const useAxiosFetch = ({ categories, lat, long, maxRadius }) => {
+const useAxiosFetch = ({ path }) => {
   const [state, dispatch] = useReducer(dataFetchReducer, {
     isLoading: false,
     hasErrored: false,
@@ -39,25 +39,23 @@ const useAxiosFetch = ({ categories, lat, long, maxRadius }) => {
 
       await axios
         .request({
-          method: 'POST',
-          url: 'https://travel-places.p.rapidapi.com/',
-          headers: {
-            'content-type': 'application/json',
-            'x-rapidapi-host': 'travel-places.p.rapidapi.com',
-            'x-rapidapi-key':
-              '57a1dc9a58msh2f3fbed74bcec9dp1ceb27jsnb20ee3db9795',
-          },
-          data: {
-            query: `{ getPlaces(categories:[${categories}],lat:${lat},lng:${long},maxDistMeters:${maxRadius}) { name,lat,lng,abstract,distance,categories } }`,
-          },
+          method: 'GET',
+          url:
+            `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?` +
+            `input=Museum%20of%20Contemporary%20Art%20Australia` +
+            `&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry` +
+            `&key=${process.env.REACT_APP_GOOGLE_API_KEY}`,
+          headers: {},
         })
         .then((response) => {
+          console.log(response);
           dispatch({
             type: 'FETCH_SUCCESS',
-            payload: response.data.data.getPlaces,
+            payload: response.data,
           });
         })
         .catch((error) => {
+          console.log(error);
           dispatch({ type: 'FETCH_FAILURE', payload: error.message });
         });
     };

@@ -44,12 +44,9 @@ function LocationPage({ route }) {
   }, []);
 
   // Get data
-  const { colour, image, path, lat, long } = route;
+  const { colour, image, path } = route;
   const { data, hasErrored, errorMessage } = useAxiosFetch({
-    categories: `"NATURE"`,
-    lat,
-    long,
-    maxRadius: 50000,
+    path,
   });
   let activities;
   if (hasErrored) return console.log(errorMessage);

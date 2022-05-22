@@ -47,7 +47,7 @@ function Footer() {
           <Col className='col-12 col-lg-9 pl-3 pl-lg-5 mt-5 mt-lg-0 d-flex flex-column'>
             <FooterText>
               This web application was designed as a non-profit personal project
-              to learn about new technologies and create a website similiar to
+              to learn about new technologies and create a website similar to
               those seen on the awwwards.com.
             </FooterText>
             <FooterText className='mb-3'>
