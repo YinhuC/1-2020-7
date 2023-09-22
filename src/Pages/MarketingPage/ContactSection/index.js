@@ -20,17 +20,20 @@ function ContactSection() {
       type: 'lines',
     });
 
-    gsap.from([split.lines, emailRef.current], {
-      duration: 1,
-      y: 20,
-      opacity: 0,
-      stagger: 0.3,
-      ease: 'power2',
+    let ctx = gsap.context(() => {
+      gsap.from([split.lines, emailRef.current], {
+        duration: 1,
+        y: 20,
+        opacity: 0,
+        stagger: 0.3,
+        ease: 'power2',
 
-      scrollTrigger: {
-        trigger: headerRef.current,
-      },
+        scrollTrigger: {
+          trigger: headerRef.current,
+        },
+      });
     });
+    return () => ctx.revert();
   });
 
   return (
